@@ -11,6 +11,7 @@
   line-height: 40px;
   margin-top: 1.8em;
   margin-left: 4em;
+  cursor: pointer;
 }
 img.display-app {
   width: 449px;
@@ -45,6 +46,7 @@ img.display-app {
     font-weight: bold;
     font-size: 26px;
     line-height: 35px;
+    cursor: pointer;
   }
   .right-section-header {
     margin-top: 2.5em;

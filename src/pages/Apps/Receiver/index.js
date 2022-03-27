@@ -86,7 +86,7 @@ const Receiver = () => {
               </div>
             ))
           : getReceivers.data.map((receiver, index) => {
-              if (receiver.id !== profile.id) {
+              if (receiver.id !== profile.id && receiver.role !== "admin") {
                 return (
                   <div
                     key={receiver.id}

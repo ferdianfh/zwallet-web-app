@@ -9,6 +9,11 @@ import * as RiIcons from "react-icons/ri";
 const History = () => {
   const token = JSON.parse(localStorage.getItem("token"));
   const [history, setHistory] = useState([]);
+  // console.log(history);
+  // history.map((item, index) => {
+  //   let tgl = new Date(item.date).toLocaleDateString();
+  //   console.log(tgl);
+  // });
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -41,6 +46,18 @@ const History = () => {
 
         {history.length > 0 ? (
           history.map((profile, index) => {
+            const date = new Date(profile.date);
+            const DATE_OPTIONS = {
+              weekday: "long",
+              year: "numeric",
+              month: "short",
+              day: "numeric"
+            };
+            const convertedDate = date.toLocaleDateString(
+              "en-GB",
+              DATE_OPTIONS
+            );
+
             if (profile.status === "Success") {
               return (
                 <div key={index} className="history-transaction-profiles ">
@@ -54,7 +71,7 @@ const History = () => {
                   />
                   <div className="profile-description">
                     <p className="profile-desc-name">{profile.receiver_name}</p>
-                    <p className="profile-desc">{profile.date}</p>
+                    <p className="profile-desc">{convertedDate}</p>
                   </div>
                   <p className="nominal-subscription">
                     -Rp{profile.amount_transfer}

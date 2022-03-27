@@ -1,0 +1,408 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  height: 100%;
+  width: 100%;
+  background-color: #fafcff;
+  /* border: 1px dashed red; */
+}
+
+/* =============================== NAVBAR ========================================= */
+.navbar {
+  height: 12vh;
+  width: 100%;
+  padding: 0 7.5em;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #fafcff;
+}
+.navbarShadow {
+  box-shadow: 1px 2px 4px 4px rgba(0, 0, 0, 0.05);
+}
+.navbar h2 {
+  font-weight: 700;
+  cursor: pointer;
+}
+.navbarBtnWrapper {
+  height: 100%;
+  width: 32%;
+  padding: 0.95em 0 0.95em 3.96em;
+}
+.navbarBtn {
+  height: 100%;
+  width: 100%;
+  padding: 0.5em 1.2em;
+  margin-left: 1em;
+  box-shadow: 0px 6px 75px rgba(100, 87, 87, 0.09);
+  border-radius: 8px;
+
+  font-weight: 600;
+}
+.login {
+  background-color: #fff;
+  color: #6379f4;
+  border: 1.5px solid #6379f4;
+}
+.login:hover {
+  background-color: #fafcff;
+  transition: 0.3s;
+}
+.login:active {
+  background-color: #f3f7fd;
+  transition: 0.3s;
+}
+.signup {
+  background-color: #6379f4;
+  color: #fff;
+}
+.signup:hover {
+  background-color: #586ff1;
+  transition: 0.3s;
+}
+.signup:active {
+  background-color: #4c61db;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 628px) {
+  .navbar {
+    padding: 1em 1.5em;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+}
+
+/* =============================== HERO SECTION ========================================= */
+.heroSection {
+  height: 100vh;
+  width: 100%;
+  /* background-color: darkorange; */
+}
+.left {
+  flex: 1.4;
+}
+.heroImageWrapper {
+  margin: 0 4.5em 2em 0;
+}
+.right {
+  flex: 1.6;
+  padding-left: 2em;
+  padding-top: 3em;
+}
+.right h1 {
+  font-size: 4.3em;
+  font-weight: 700;
+}
+.right p {
+  font-size: 1.05em;
+  line-height: 2.2em;
+  margin-top: 1.2em;
+  color: #3a3d42;
+}
+.heroBtnWrapper {
+  height: auto;
+  width: 35%;
+  padding: 0.7em 1.8em 0.7em 0;
+  margin-top: 1.1em;
+}
+.heroBtn {
+  background-color: #6379f4;
+  padding: 0.8em 1.2em;
+  border-radius: 8px;
+  box-shadow: 0px 6px 75px rgba(100, 87, 87, 0.09);
+}
+.heroBtn:hover {
+  background-color: #586ff1;
+  transition: 0.3s;
+}
+.heroBtn:active {
+  background-color: #4c61db;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 628px) {
+  .heroSection {
+    height: 80vh;
+    width: 100%;
+  }
+  .right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1em;
+  }
+  .right h1 {
+    font-size: 2em;
+    font-weight: 700;
+  }
+  .right p {
+    font-size: 0.65em;
+    line-height: 1.2em;
+    margin-top: 1em;
+    color: #3a3d42;
+  }
+  .heroBtnWrapper {
+    height: auto;
+    width: 50%;
+    padding: 1em;
+    margin-top: 1.1em;
+  }
+  .heroBtn {
+    padding: 0.5em 1em;
+  }
+}
+
+/* =============================== PARTNER SECTION ========================================= */
+.partnerSection {
+  height: 38vh;
+  width: 100%;
+  background-color: #473ad10f;
+  padding: 3.5em 7.5em;
+}
+/* .partnersWrapper {
+  background-color: darkcyan;
+} */
+
+@media screen and (max-width: 628px) {
+  .partnerSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+  }
+  .partnersWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .partnerImage {
+    height: 112px;
+    width: 112px;
+  }
+}
+
+/* =============================== ABOUT APP SECTION ========================================= */
+.aboutAppSection {
+  height: 100vh;
+  width: 100%;
+  padding: 2em 7.5em;
+}
+.aboutAppTitle {
+  font-size: 4.2em;
+  font-weight: 700;
+  margin-bottom: 0.85em;
+}
+.aboutAppDescription {
+  color: #3a3d42;
+  line-height: 1.75em;
+  font-size: 1.15em;
+  margin-bottom: 2em;
+}
+.aboutAppCardsWrapper {
+  margin-top: 0.85em;
+}
+.aboutAppCard {
+  border-radius: 20px;
+  margin: 1em 1.1em;
+  padding: 1.5em 2.5em;
+}
+.aboutAppCard:hover {
+  background-color: #ffffff;
+  box-shadow: 0px 4px 250px rgba(172, 172, 172, 0.15);
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: 0.1s;
+}
+.iconCardWrapper {
+  border-radius: 50%;
+  background-color: #473ad11a;
+  padding: 0.75em 1em;
+  margin: 0.75em;
+}
+.aboutIcon {
+  font-size: 1.42em;
+}
+.aboutAppCardTitle {
+  font-size: 1.35em;
+  font-weight: 600;
+  margin: 1.5em;
+}
+.aboutAppCardDescription {
+  color: #3a3d42;
+  line-height: 1.5em;
+  font-size: 0.957em;
+}
+
+@media screen and (max-width: 628px) {
+  .aboutAppSection {
+    height: 80vh;
+    width: 100%;
+    padding: 1em;
+  }
+  .aboutAppTitle {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+  .aboutAppDescription {
+    line-height: 1.75em;
+    font-size: 0.65em;
+    margin-bottom: 2em;
+  }
+  .aboutAppCard {
+    margin: 0.31em;
+    padding: 0.5em 1.5em;
+  }
+
+  .iconCardWrapper {
+    padding: 0.35em 0.75em;
+    margin: 0.35em;
+  }
+  .aboutIcon {
+    font-size: 0.72em;
+  }
+
+  .aboutAppCardTitle {
+    font-size: 0.87em;
+    font-weight: 600;
+    margin: 1em;
+  }
+  .aboutAppCardDescription {
+    line-height: 1em;
+    font-size: 0.65em;
+  }
+}
+
+/* =============================== FEATURES SECTION ========================================= */
+.featuresSection {
+  height: 100vh;
+  width: 100%;
+  background-color: #473ad10f;
+  padding: 1em 7.5em;
+}
+.featureImageWrapper {
+  margin: 0 4.5em 2em 0;
+}
+.featureTitle {
+  font-size: 4.2em;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+.featuresCard {
+  background-color: #ffffff;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  padding: 0.4em 1.25em;
+  margin-bottom: 1.2em;
+}
+.featuresCard:hover {
+  cursor: pointer;
+  transform: translateX(-20px);
+  transition: 0.3s;
+}
+.featuresCard p {
+  margin: 0;
+}
+.featureName {
+  font-weight: 700;
+  font-size: 1.3em;
+}
+.featureDescription {
+  color: #3a3d42e5;
+  font-size: 1.1em;
+}
+
+@media screen and (max-width: 628px) {
+  .featuresSection {
+    height: 80vh;
+    width: 100%;
+    padding: 1em;
+  }
+  .right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1em;
+  }
+  .right h1 {
+    font-size: 2em;
+    font-weight: 700;
+  }
+  .featuresCard {
+    text-align: left;
+    border-radius: 12px;
+    padding: 0.4em 1.25em;
+    margin-bottom: 1em;
+  }
+  .featuresCard p {
+    margin-bottom: 0.25em;
+    font-size: 0.75em;
+  }
+}
+
+/* =============================== REVIEW SECTION ========================================= */
+/* .reviewSection {
+  height: 100vh;
+  width: 100%;
+  padding: 2.3em 7.5em;
+}
+.reviewTitle {
+  font-size: 4.2em;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+.reviewDescription {
+  color: #3a3d42;
+  line-height: 1.75em;
+  font-size: 1.15em;
+  margin-bottom: 2em;
+} */
+
+/* =============================== FOOTER ========================================= */
+.footer {
+  height: 40vh;
+  width: 100%;
+  background-color: #6379f4;
+  padding: 2em 7.5em;
+}
+.footerContent {
+  margin-bottom: 2em;
+}
+.footerContent h2 {
+  font-weight: 700;
+}
+.copyright {
+  border-top: 1px solid #ffffff;
+}
+.copyright p {
+  margin: 0;
+}
+.contact p:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 628px) {
+  .footer {
+    padding: 1em 1.5em;
+  }
+  .footerContent h2 {
+    font-size: 1.2em;
+  }
+  .footerContent p {
+    font-size: 0.75em;
+  }
+
+  .copyright p {
+    font-size: 0.5em;
+  }
+}

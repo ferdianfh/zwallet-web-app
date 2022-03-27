@@ -31,6 +31,17 @@ const Transaction = () => {
         {history.length > 0 ? (
           // eslint-disable-next-line array-callback-return
           history.map((profile, index) => {
+            const date = new Date(profile.date);
+            const DATE_OPTIONS = {
+              weekday: "long",
+              year: "numeric",
+              month: "short",
+              day: "numeric"
+            };
+            const convertedDate = date.toLocaleDateString(
+              "en-GB",
+              DATE_OPTIONS
+            );
             if (profile.status === "Success") {
               return (
                 <div
@@ -49,7 +60,7 @@ const Transaction = () => {
                     <p className="profile-desc-name mb-0">
                       {profile.receiver_name}
                     </p>
-                    <p className="profile-desc mb-0">{profile.date}</p>
+                    <p className="profile-desc mb-0">{convertedDate}</p>
                   </div>
                   <p className="nominal-subscription me-3">
                     -Rp{profile.amount_transfer}

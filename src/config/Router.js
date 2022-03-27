@@ -28,13 +28,15 @@ import NewPIN from "../pages/Apps/ChangePIN/NewPIN";
 import ProfilePicture from "../pages/Apps/ProfilePicture";
 import SignUpSuccess from "../pages/Auth/SignUpSuccess";
 import CreatePINSuccess from "../pages/Auth/CreatePINSuccess";
+import { LandingPage } from "../pages/LandingPage/LandingPage";
 // import RequireAuth from "./components/base/RequireAuth";
 
 const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route index element={<Navigate to="/apps" />} />
+        <Route path={"/"} element={<LandingPage />} />
+
         <Route path={"/auth"} element={<Auth />}>
           <Route path={"login"} element={<Login />} />
           <Route path={"signup"} element={<SignUp />} />
@@ -66,6 +68,8 @@ const Router = () => {
           <Route path={"password/change"} element={<ChangePassword />} />
           <Route path={"PIN/change"} element={<ChangePIN />} />
           <Route path={"PIN/new"} element={<NewPIN />} />
+
+          <Route index element={<Navigate to="/apps" />} />
         </Route>
 
         <Route path={"/*"} element={<Page404 />} />

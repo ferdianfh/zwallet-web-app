@@ -96,7 +96,12 @@ const SignUp = () => {
 
         {/* <!-- layout mobile version --> */}
         <div className="col-12 right-section-header d-md-none">
-          <h1 className="logo text-blue text-center">Zwallet</h1>
+          <h1
+            onClick={() => navigate("/")}
+            className="logo text-blue text-center"
+          >
+            Zwallet
+          </h1>
         </div>
 
         <div className="col-12 right-section-content text-center animation-pull-out">
