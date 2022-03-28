@@ -107,7 +107,7 @@ const SignUp = () => {
         <div className="col-12 right-section-content text-center animation-pull-out">
           <h2 className="login-title d-md-none">Sign Up</h2>
           <p className="login-desc d-md-none">
-            Create your account to access all great features from Zwallet.
+            Create your new account to access all the great features in Zwallet.
           </p>
           {/* <!-- input form start here--> */}
           <form onSubmit={handleSubmit}>

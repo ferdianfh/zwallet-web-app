@@ -85,8 +85,8 @@ const Login = () => {
         <div className="col-12 right-section-content text-center animation-pull-out">
           <h2 className="login-title d-md-none">Login</h2>
           <p className="login-desc d-md-none">
-            Login to your existing account to access <br></br> all the features
-            in Zwallet.
+            Login to your existing account to access all the great features in
+            Zwallet. <br /> Top Up your Balance and Transfer to your friends!
           </p>
           {/* <!-- input form start here--> */}
           <div className="input-form d-flex mt-5 ">
