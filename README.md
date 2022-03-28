@@ -23,7 +23,7 @@ Hello! My name's **Ferdi** and I'm part of the Developer Team who built **Zwalle
 
 ## Demonstration
 
-Or you can try it here: [Zwallet Web App](https://zwallet-web-app.netlify.app/auth/login)
+Or you can try it here: [Zwallet Web App](https://zwallet-web-app.netlify.app)
 
 ## Pages
 

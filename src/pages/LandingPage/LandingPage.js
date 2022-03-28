@@ -148,12 +148,10 @@ export const LandingPage = () => {
           </h1>
           <p className={styles.aboutAppDescription}>
             We have some great features from the application and it’s totally
-            free
-            <br />
-            to use by all users around the world.
+            free to use by all users around the world.
           </p>
 
-          <div className={`${styles.aboutAppCardsWrapper} d-flex flex-row `}>
+          <div className={`${styles.aboutAppCardsWrapper}`}>
             <div
               className={`${styles.aboutAppCard} d-flex flex-column justify-content-center align-items-center`}
             >

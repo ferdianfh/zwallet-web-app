@@ -71,10 +71,14 @@
 
 @media screen and (max-width: 628px) {
   .navbar {
-    padding: 1em 1.5em;
+    height: 10vh;
+    width: 100%;
+    padding: 0.3em 1.5em;
     position: sticky;
     top: 0;
     z-index: 1;
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -128,7 +132,7 @@
 
 @media screen and (max-width: 628px) {
   .heroSection {
-    height: 80vh;
+    height: 60vh;
     width: 100%;
   }
   .right {
@@ -139,11 +143,11 @@
     padding: 1em;
   }
   .right h1 {
-    font-size: 2em;
+    font-size: 2.75em;
     font-weight: 700;
   }
   .right p {
-    font-size: 0.65em;
+    font-size: 0.85em;
     line-height: 1.2em;
     margin-top: 1em;
     color: #3a3d42;
@@ -208,6 +212,8 @@
   margin-bottom: 2em;
 }
 .aboutAppCardsWrapper {
+  display: flex;
+  flex-direction: row;
   margin-top: 0.85em;
 }
 .aboutAppCard {
@@ -244,7 +250,7 @@
 
 @media screen and (max-width: 628px) {
   .aboutAppSection {
-    height: 80vh;
+    height: 100%;
     width: 100%;
     padding: 1em;
   }
@@ -254,8 +260,12 @@
   }
   .aboutAppDescription {
     line-height: 1.75em;
-    font-size: 0.65em;
-    margin-bottom: 2em;
+    font-size: 0.85em;
+    margin-bottom: 1.75em;
+  }
+  .aboutAppCardsWrapper {
+    display: flex;
+    flex-direction: column;
   }
   .aboutAppCard {
     margin: 0.31em;
@@ -277,7 +287,7 @@
   }
   .aboutAppCardDescription {
     line-height: 1em;
-    font-size: 0.65em;
+    font-size: 0.75em;
   }
 }
 
@@ -322,7 +332,7 @@
 
 @media screen and (max-width: 628px) {
   .featuresSection {
-    height: 80vh;
+    height: 100%;
     width: 100%;
     padding: 1em;
   }
@@ -340,12 +350,12 @@
   .featuresCard {
     text-align: left;
     border-radius: 12px;
-    padding: 0.4em 1.25em;
+    padding: 0.65em 1.25em;
     margin-bottom: 1em;
   }
   .featuresCard p {
-    margin-bottom: 0.25em;
-    font-size: 0.75em;
+    margin-bottom: 0.45em;
+    font-size: 0.85em;
   }
 }
 
@@ -394,6 +404,8 @@
 @media screen and (max-width: 628px) {
   .footer {
     padding: 1em 1.5em;
+    height: 100%;
+    width: 100%;
   }
   .footerContent h2 {
     font-size: 1.2em;
