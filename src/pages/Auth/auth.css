@@ -48,7 +48,7 @@ img.display-app {
 }
 
 /* styling default for mobile version */
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 628px) {
   [class^="col"] {
     margin-bottom: 0.5em;
     padding: 0.4em;
@@ -94,7 +94,9 @@ img.display-app {
   .create {
     margin-bottom: 1.9em;
   }
-
+  input {
+    width: 100%;
+  }
   .input-form {
     width: 100%;
     margin: 0 0.8em 0 0;

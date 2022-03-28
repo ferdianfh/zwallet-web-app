@@ -38,7 +38,8 @@ const SignUpSuccess = () => {
           <BsIcons.BsCheckCircleFill className="success-icon d-md-none text-green mt-5" />
           <h2 className="login-title d-md-none">Verified Success!</h2>
           <p className="login-desc d-md-none mb-5">
-            Account successfully verified <br></br> you can create new PIN now.
+            Congrats! Your account was successfully verified! <br></br> Now you
+            can create PIN to secure your transaction and account.
           </p>
 
           <Button onClick={toCreatePINPage} className="button btn-login">
