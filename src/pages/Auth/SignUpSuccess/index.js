@@ -41,10 +41,7 @@ const SignUpSuccess = () => {
             Account successfully verified <br></br> you can create new PIN now.
           </p>
 
-          <Button
-            onClick={toCreatePINPage}
-            className="button btn-login mb-1 mt-1"
-          >
+          <Button onClick={toCreatePINPage} className="button btn-login">
             Create PIN Now
           </Button>
         </div>
