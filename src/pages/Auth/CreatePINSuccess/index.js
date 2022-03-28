@@ -25,20 +25,23 @@ const CreatePINSuccess = () => {
 
         {/* <!-- layout mobile version --> */}
         <div className="col-12 right-section-header d-md-none">
-          <h1 className="logo text-blue text-center">Zwallet</h1>
+          <h1
+            onClick={() => navigate("/")}
+            className="logo text-blue text-center"
+          >
+            Zwallet
+          </h1>
         </div>
 
         <div className="col-12 right-section-content text-center ">
           <BsIcons.BsCheckCircleFill className="success-icon d-md-none text-green mt-5" />
-          <h2 className="login-title d-md-none">Verified Success!</h2>
+          <h2 className="login-title d-md-none">Create PIN Success!</h2>
           <p className="login-desc d-md-none">
-            Account successfully verified <br></br> you can create new PIN now.
+            Your PIN was successfully created. <br></br> Login to your account
+            and start exploring!
           </p>
 
-          <Button
-            onClick={toCreatePINPage}
-            className="button btn-login mb-1 mt-1"
-          >
+          <Button onClick={toCreatePINPage} className="button btn-login">
             Login Now
           </Button>
         </div>

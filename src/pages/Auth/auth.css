@@ -53,7 +53,8 @@ img.display-app {
     margin-bottom: 3em;
   }
   .right-section-content {
-    width: 420px;
+    height: 87%;
+    width: 100%;
     background-color: #ffffff;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
