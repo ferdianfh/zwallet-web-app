@@ -37,8 +37,8 @@ const CreatePINSuccess = () => {
           <BsIcons.BsCheckCircleFill className="success-icon d-md-none text-green mt-5" />
           <h2 className="login-title d-md-none">Create PIN Success!</h2>
           <p className="login-desc d-md-none">
-            Your PIN was successfully created. <br></br> Login to your account
-            and start exploring!
+            Congrats! Your PIN was successfully created. <br></br> Now you can
+            Login to your account and start exploring Zwallet!
           </p>
 
           <Button onClick={toCreatePINPage} className="button btn-login">
