@@ -37,8 +37,8 @@ const ResetPassConfirm = () => {
         <div className="col-12 right-section-content text-center animation-pull-out">
           <h2 className="login-title d-md-none">Reset Password</h2>
           <p className="login-desc d-md-none">
-            Enter your Zwallet e-mail so we can send <br></br> you a password
-            reset link.
+            Enter your Zwallet email so we can send you a link to reset your
+            password. <br /> Make sure nobody knows!
           </p>
           {/* <!-- input form start here--> */}
 

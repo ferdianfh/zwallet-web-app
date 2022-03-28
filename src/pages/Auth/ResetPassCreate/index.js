@@ -41,8 +41,8 @@ const ResetPassCreate = () => {
         <div className="col-12 right-section-content text-center animation-pull-out">
           <h2 className="login-title d-md-none">Reset Password</h2>
           <p className="login-desc d-md-none">
-            Create and confirm your new password so <br></br> you can login to
-            Zwallet.
+            Create and confirm your new password so you can login to your
+            Zwallet account.
           </p>
           {/* <!-- input form start here--> */}
 
