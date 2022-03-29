@@ -108,6 +108,7 @@
   line-height: 2.2em;
   margin-top: 1.2em;
   color: #3a3d42;
+  padding-right: 15em;
 }
 .heroBtnWrapper {
   height: auto;
@@ -142,15 +143,16 @@
     text-align: center;
     padding: 1em;
   }
-  .right h1 {
-    font-size: 3.75em;
-    font-weight: 700;
+  .heroTitleSm {
+    font-size: 2.25em !important;
+    font-weight: 800;
   }
   .right p {
-    font-size: 0.85em;
+    font-size: 1.05em;
     line-height: 1.2em;
     margin-top: 1em;
     color: #3a3d42;
+    padding-right: 0;
   }
   .heroBtnWrapper {
     height: auto;
@@ -256,11 +258,11 @@
   }
   .aboutAppTitle {
     font-size: 2em;
-    margin-bottom: 0.5em;
+    margin: 0.5em 0;
   }
   .aboutAppDescription {
     line-height: 1.75em;
-    font-size: 0.85em;
+    font-size: 0.95em;
     margin-bottom: 1.75em;
   }
   .aboutAppCardsWrapper {
@@ -286,8 +288,8 @@
     margin: 1em;
   }
   .aboutAppCardDescription {
-    line-height: 1em;
-    font-size: 0.75em;
+    line-height: 1.25em;
+    font-size: 0.95em;
   }
 }
 
@@ -343,9 +345,10 @@
     text-align: center;
     padding: 1em;
   }
-  .right h1 {
-    font-size: 2em;
+  .featureTitle {
+    font-size: 2em !important;
     font-weight: 700;
+    margin-bottom: 1.5em;
   }
   .featuresCard {
     text-align: left;
@@ -355,7 +358,8 @@
   }
   .featuresCard p {
     margin-bottom: 0.45em;
-    font-size: 0.85em;
+    font-size: 0.95em;
+    line-height: 1.25em;
   }
 }
 
@@ -408,10 +412,10 @@
     width: 100%;
   }
   .footerContent h2 {
-    font-size: 1.2em;
+    font-size: 1.42em;
   }
   .footerContent p {
-    font-size: 0.75em;
+    font-size: 0.85em;
   }
 
   .copyright p {

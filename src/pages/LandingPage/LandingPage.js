@@ -76,13 +76,13 @@ export const LandingPage = () => {
           </div>
 
           <div className={`${styles.right} col-12 col-lg-7 d-flex flex-column`}>
-            <h1>
+            <h1 className={styles.heroTitleSm}>
               Awesome App <br /> For Saving{" "}
               <span className="text-blue">Time.</span>
             </h1>
             <p>
-              We bring you a website app for banking problems that <br />{" "}
-              oftenly wasting much of your times.
+              We bring you a website app for banking problems that oftenly
+              wasting much of your times.
             </p>
 
             <div className={styles.heroBtnWrapper}>
