@@ -11,3 +11,19 @@
 .button.btn-login.btn-add-phone {
   margin-top: 3em !important;
 }
+
+@media screen and (max-width: 628px) {
+  .newPhoneDesc {
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 28px;
+    color: #7a7886;
+  }
+  .input-form.pass {
+    width: 100%;
+  }
+  .btn-new-phone {
+    width: 100%;
+    margin-top: 9.5em;
+  }
+}
