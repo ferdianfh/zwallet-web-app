@@ -13,6 +13,7 @@ import Input from "../../../components/base/Input";
 import { useDispatch, useSelector } from "react-redux";
 import { GetProfile } from "../../../redux/actions/apps/getProfile";
 import { PINConfirmation } from "../../../redux/actions/apps/PINConfirmation";
+import Sidebar from "../../../components/module/Sidebar";
 
 const Profile = () => {
   const dispatch = useDispatch();
@@ -70,26 +71,26 @@ const Profile = () => {
   };
   return (
     <Fragment>
-      <section className="content-bar big-screen col-lg-8 animation-pull-out ">
-        <section className="profile-content d-flex flex-column justify-content-center align-items-center">
-          <div className="profile-img ">
+      <div className="small-screen-content d-lg-none animation-pull-out">
+        <section className="profileContentSm d-flex flex-column justify-content-center align-items-center d-lg-none">
+          <div className="profileImage ">
             <img
               src={profile.picture ? profile.picture : img}
-              className="user-pic mt-3"
-              height="76px"
+              className="user-pic mt-1"
+              height={76}
               alt="Users"
             />
           </div>
 
           <div
             onClick={addProfilePicture}
-            className="profile-edit d-flex flex-row justify-content-center align-items-center "
+            className="profile-edit d-flex flex-row justify-content-center align-items-center d-lg-none"
           >
             <BsIcons.BsPen className="pen-edit text-grey m-0" />
             <p className="text-edit text-grey ms-1 mt-1 mb-0">Edit</p>
           </div>
 
-          <div className="profile-name d-flex flex-column align-items-center">
+          <div className="profile-name d-flex flex-column align-items-center d-lg-none">
             <p className="profile-user-name">
               {profile.first_name} {profile.last_name}
             </p>
@@ -100,76 +101,147 @@ const Profile = () => {
 
           <div
             onClick={toPersonalInfoPage}
-            className="profile-manager d-flex flex-row justify-content-between"
+            className="profileManagerSm d-flex flex-row justify-content-between"
           >
-            <p className="profile-manager-option">Personal Information</p>
+            <p className="profileManagerSmOption">Personal Information</p>
             <BsIcons.BsArrowRight className="icons-size arrow-nav-manager" />
           </div>
+
           <div
             onClick={handleModalPIN}
-            className="profile-manager d-flex flex-row justify-content-between"
+            className="profileManagerSm d-flex flex-row justify-content-between"
           >
-            <p className="profile-manager-option">Change Password</p>
+            <p className="profileManagerSmOption">Change Password</p>
             <BsIcons.BsArrowRight className="icons-size arrow-nav-manager" />
           </div>
+
           <div
             onClick={toChangePINPage}
-            className="profile-manager d-flex flex-row justify-content-between"
+            className="profileManagerSm d-flex flex-row justify-content-between"
           >
-            <p className="profile-manager-option">
+            <p className="profileManagerSmOption">
               {profile.PIN ? "Change PIN" : "Create PIN"}
             </p>
             <BsIcons.BsArrowRight className="icons-size arrow-nav-manager" />
           </div>
+
+          <div className="profileManagerSm d-flex flex-row justify-content-between">
+            <p className="profileManagerSmOption">Notification</p>
+          </div>
+
           <div
             onClick={handleModalAlert}
-            className="profile-manager d-flex flex-row justify-content-between"
+            className="profileManagerSm d-flex flex-row justify-content-center"
           >
-            <p className="profile-manager-option">Log Out</p>
+            <p className="logoutSm">Log Out</p>
           </div>
         </section>
+      </div>
 
-        {openModalAlert ? (
-          <ModalAlert
-            alertIcon={<AiIcons.AiOutlineLogout />}
-            alertTitle="Log Out Account?"
-            alertDesc="Are you sure you want to log out from Zwallet? Save all your changes before logout."
-            action="Log Out"
-            closeModal={handleModalAlert}
-            handleAction={logOut}
-          />
-        ) : null}
+      <div className="big-screen-content d-none d-lg-block d-lg-flex mt-lg-2">
+        <Sidebar />
 
-        {openModalPIN ? (
-          <ModalPIN
-            modalTitle="Enter PIN to Change Password"
-            modalSubtitle="Enter your 6 Digits PIN to confirm your account. We make sure you're the one who make the changes."
-            closeModal={handleModalPIN}
-            handleAction={handleSubmit}
-            isLoading={PinConfirmation.loading}
-          >
-            <form onSubmit={handleSubmit}>
-              <div className="pin-confirm-wrapper">
-                {pin.map((pins, index) => (
-                  <Input
-                    name="pin"
-                    value={pins}
-                    onChange={(e) => handleChange(e.target, index)}
-                    onFocus={(e) => e.target.select()}
-                    className="pin-confirm-input"
-                    type="text"
-                    maxLength="1"
-                    key={index}
-                  />
-                ))}
-              </div>
-              {errorMessage ? (
-                <p className="text-error mb-0">{errorMessage}</p>
-              ) : null}
-            </form>
-          </ModalPIN>
-        ) : null}
-      </section>
+        <section className="content-bar big-screen col-lg-8 animation-pull-out ">
+          <section className="profile-content d-flex flex-column justify-content-center align-items-center">
+            <div className="profile-img ">
+              <img
+                src={profile.picture ? profile.picture : img}
+                className="user-pic mt-3"
+                height="76px"
+                alt="Users"
+              />
+            </div>
+
+            <div
+              onClick={addProfilePicture}
+              className="profile-edit d-flex flex-row justify-content-center align-items-center "
+            >
+              <BsIcons.BsPen className="pen-edit text-grey m-0" />
+              <p className="text-edit text-grey ms-1 mt-1 mb-0">Edit</p>
+            </div>
+
+            <div className="profile-name d-flex flex-column align-items-center">
+              <p className="profile-user-name">
+                {profile.first_name} {profile.last_name}
+              </p>
+              <p className="profile-user-phone">
+                {profile.phone ? `+62 ${profile.phone}` : "+ Add phone number"}
+              </p>
+            </div>
+
+            <div
+              onClick={toPersonalInfoPage}
+              className="profile-manager d-flex flex-row justify-content-between"
+            >
+              <p className="profile-manager-option">Personal Information</p>
+              <BsIcons.BsArrowRight className="icons-size arrow-nav-manager" />
+            </div>
+            <div
+              onClick={handleModalPIN}
+              className="profile-manager d-flex flex-row justify-content-between"
+            >
+              <p className="profile-manager-option">Change Password</p>
+              <BsIcons.BsArrowRight className="icons-size arrow-nav-manager" />
+            </div>
+            <div
+              onClick={toChangePINPage}
+              className="profile-manager d-flex flex-row justify-content-between"
+            >
+              <p className="profile-manager-option">
+                {profile.PIN ? "Change PIN" : "Create PIN"}
+              </p>
+              <BsIcons.BsArrowRight className="icons-size arrow-nav-manager" />
+            </div>
+            <div
+              onClick={handleModalAlert}
+              className="profile-manager d-flex flex-row justify-content-between"
+            >
+              <p className="profile-manager-option">Log Out</p>
+            </div>
+          </section>
+        </section>
+      </div>
+
+      {openModalAlert ? (
+        <ModalAlert
+          alertIcon={<AiIcons.AiOutlineLogout />}
+          alertTitle="Log Out Account?"
+          alertDesc="Are you sure you want to log out from Zwallet? Save all your changes before logout."
+          action="Log Out"
+          closeModal={handleModalAlert}
+          handleAction={logOut}
+        />
+      ) : null}
+
+      {openModalPIN ? (
+        <ModalPIN
+          modalTitle="Enter PIN to Change Password"
+          modalSubtitle="Enter your 6 Digits PIN to confirm your account. We make sure you're the one who make the changes."
+          closeModal={handleModalPIN}
+          handleAction={handleSubmit}
+          isLoading={PinConfirmation.loading}
+        >
+          <form onSubmit={handleSubmit}>
+            <div className="pin-confirm-wrapper">
+              {pin.map((pins, index) => (
+                <Input
+                  name="pin"
+                  value={pins}
+                  onChange={(e) => handleChange(e.target, index)}
+                  onFocus={(e) => e.target.select()}
+                  className="pin-confirm-input"
+                  type="text"
+                  maxLength="1"
+                  key={index}
+                />
+              ))}
+            </div>
+            {errorMessage ? (
+              <p className="text-error mb-0">{errorMessage}</p>
+            ) : null}
+          </form>
+        </ModalPIN>
+      ) : null}
     </Fragment>
   );
 };
