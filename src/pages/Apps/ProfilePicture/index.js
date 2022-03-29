@@ -51,7 +51,41 @@ const ProfilePicture = () => {
   return (
     <Fragment>
       <div className="small-screen-content d-lg-none animation-pull-out">
-        <section className="profileContentSm d-flex flex-column justify-content-center align-items-center d-lg-none"></section>
+        <section className="profileContentSm d-flex flex-column justify-content-center align-items-center d-lg-none">
+          <h2 className="text-center">Profile Picture</h2>
+          <form
+            onSubmit={handleSumbit}
+            method="post"
+            encType="multipart/form-data"
+          >
+            <Input
+              className="picture-input"
+              type="file"
+              name="picture"
+              id="picture"
+              onChange={handleUpload}
+              accept=".png, .jpg, .jpeg"
+            />
+            <p className="text-blue text-center preview-text">Preview:</p>
+            {form.picture ? (
+              <img
+                className="preview-picture"
+                src={URL.createObjectURL(form.picture)}
+                alt="ProfilePicture"
+              />
+            ) : (
+              <img className="preview-picture" src={img} alt="ProfilePicture" />
+            )}
+
+            <Button
+              isLoading={profilePictureData.loading}
+              className="button btn-login btn-upload"
+              type="submit"
+            >
+              Save
+            </Button>
+          </form>
+        </section>
       </div>
 
       <div className="big-screen-content d-none d-lg-block d-lg-flex mt-lg-2">
@@ -100,17 +134,17 @@ const ProfilePicture = () => {
             </div>
             <div className="btn-wrapper"></div>
           </section>
-
-          {openModalSuccess ? (
-            <ModalSuccess
-              successTitle="Add Profile Picture Success!"
-              successDesc="Congratulations! Now your friends could recognize you here!"
-              action="Go back to Profile"
-              closeModal={handleNavigate}
-            />
-          ) : null}
         </section>
       </div>
+
+      {openModalSuccess ? (
+        <ModalSuccess
+          successTitle="Add Profile Picture Success!"
+          successDesc="Congratulations! Now your friends could recognize you here!"
+          action="Go back to Profile"
+          closeModal={handleNavigate}
+        />
+      ) : null}
     </Fragment>
   );
 };
