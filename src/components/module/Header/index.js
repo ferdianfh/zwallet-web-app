@@ -1,7 +1,9 @@
 import React, { Fragment, useEffect } from "react";
 import * as BsIcons from "react-icons/bs";
+import * as FiIcons from "react-icons/fi";
 import img from "../../../assets/img/blank-profile-picture.png";
 import "./header.css";
+import { useLocation, useNavigate } from "react-router-dom";
 
 // redux
 import { useDispatch, useSelector } from "react-redux";
@@ -12,47 +14,105 @@ const Header = () => {
   const profileData = useSelector((state) => state.GetProfile);
   const profile = profileData.data;
 
+  const navigate = useNavigate();
+  const { pathname } = useLocation();
+
   useEffect(() => {
     dispatch(GetProfile());
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // const [optionMenuSm, setOptionMenuSm] = useState(false);
+  // const showMoreOptions = () => {
+  //   setOptionMenuSm(!optionMenuSm);
+  // };
+
   return (
     <Fragment>
       <header className="col-12 header-content d-flex flex-column">
-        {/* <!-- status bar xs, sm version --> */}
-        <div className="status-bars d-flex justify-content-between mb-3 d-md-none">
-          <img src="src/timestyle.svg" alt="Time" />
-          <img src="src/status-bars.svg" alt="Bars" />
-        </div>
-        {/* <!-- status bar md version --> */}
-        <div className="status-bars d-md-flex justify-content-md-between mb-3 d-none d-md-block d-lg-none">
-          <img src="src/timestyle-black.svg" alt="Time" />
-          <img src="src/status-bars-black.svg" alt="Bars" />
-        </div>
+        {/* <!-- header content for xs, sm --> */}
 
-        <nav className="nav-bar d-flex flex-row justify-content-between mb-4 mb-lg-1">
-          {/* <!-- header content for xs, sm --> */}
-          <img
-            className="ms-2 d-md-none d-lg-none"
-            src="src/robert.svg"
-            alt="Robert"
-          />
-          <div className="saldo d-md-none d-lg-none">
-            <p className="saldo-text mb-0 mt-3">Balance</p>
-            <p className="saldo-nominal">Rp120.000</p>
+        {pathname === "/apps" ? (
+          <nav className="navbarSm d-flex flex-row justify-content-between align-items-center d-md-none mb-1">
+            <img
+              onClick={() => navigate("/apps/profile")}
+              className="ms-2 d-md-none d-lg-none user-pic"
+              src={profile.picture ? profile.picture : img}
+              alt="ProfilePicture"
+              height={53}
+            />
+            <div
+              onClick={() => navigate("/apps/profile")}
+              className="greetingWrapper d-md-none d-lg-none"
+            >
+              <p className="greetingText mb-0 mt-3">Hello,</p>
+              <p className="userFullName">
+                {profile.first_name} {profile.last_name}
+              </p>
+            </div>
+            <BsIcons.BsBell
+              onClick={() => navigate("/apps/notifications")}
+              className="notifIcon d-md-none icons-size mt-2 me-2"
+            />
+          </nav>
+        ) : (
+          <nav className="navbarSmv2 d-flex flex-row justify-content-between align-items-center d-md-none">
+            <div className="d-flex flex-row flex-start align-items-center">
+              <FiIcons.FiArrowLeft
+                onClick={() => navigate(-1)}
+                className="goBackIcon"
+              />
+              <p className="titlePageSm">
+                {pathname === "/apps/history"
+                  ? "History"
+                  : pathname === "/apps/profile"
+                  ? "Profile"
+                  : pathname === "/apps/profile/picture"
+                  ? "Edit Profile Picture"
+                  : pathname === "/apps/profile/information"
+                  ? "Personal Information"
+                  : pathname === "/apps/profile/phone"
+                  ? "Manage Phone Number"
+                  : pathname === "/apps/profile/phone/new"
+                  ? "Add Phone Number"
+                  : pathname === "/apps/password/change"
+                  ? "Change Password"
+                  : pathname === "/apps/PIN/change"
+                  ? "Change PIN"
+                  : pathname === "/apps/notifications"
+                  ? "Notifications"
+                  : "hehe"}
+              </p>
+            </div>
+
+            <BsIcons.BsThreeDotsVertical
+              // onClick={showMoreOptions}
+              className="moreOptionsMenu"
+            />
+          </nav>
+        )}
+
+        {/* {optionMenuSm ? (
+          <div className="OptionMenuWrapperSm">
+            <ul>
+              <li>Dashboard</li>
+              <li>Profile</li>
+              <li>Log Out</li>
+            </ul>
           </div>
-          <BsIcons.BsBell className="d-md-none icons-size text-white mt-4 me-2" />
+        ) : 
+        null} */}
 
-          {/* <!-- header content for md, lg, xl, xxl --> */}
+        {/* <!-- header content for md, lg, xl, xxl --> */}
+        <nav className="nav-bar d-none d-md-flex flex-row justify-content-between align-items-center mb-4 mb-lg-1">
           <h2 className="logo text-blue d-none d-md-block mt-3">Zwallet</h2>
 
           <div className="user-profile d-md-flex flex-row d-none d-md-block">
             <img
               className="ms-2 me-4 user-pic"
               src={profile.picture ? profile.picture : img}
-              alt="Robert"
-              height="53px"
+              alt="ProfilePicture"
+              height={53}
             />
             <div className="user-profile-name me-4">
               <p className="name mb-0">

@@ -37,3 +37,74 @@
     color: #6379f4;
   }
 }
+
+@media screen and (max-width: 628px) {
+  .header-content {
+    margin-bottom: 0;
+  }
+  /* .navbarSm {
+    background-color: darkgoldenrod;
+  } */
+  .user-pic {
+    border-radius: 5px;
+    height: 53px;
+    object-fit: cover;
+  }
+  .greetingWrapper {
+    margin-left: -6.5em;
+  }
+  .greetingText,
+  .notifIcon {
+    color: #4d4b57;
+  }
+  .userFullName {
+    color: #4d4b57;
+    font-size: 1.25em;
+    font-weight: 700;
+  }
+
+  .navbarSmv2 {
+    width: 100%;
+    padding: 1em;
+
+    background-color: #fafcff;
+    /* background-color: darkgoldenrod; */
+  }
+  .goBackIcon {
+    font-size: 1.5em;
+    color: #4d4b57;
+  }
+  .titlePageSm {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #4d4b57;
+    margin: 0 1.2em;
+  }
+  .moreOptionsMenu {
+    font-size: 1.27em;
+    color: #4d4b57;
+  }
+  .moreOptionsBg {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: transparent;
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .OptionMenuWrapperSm {
+    background-color: darkorange;
+    height: 180px;
+    width: 175px;
+    position: relative;
+    background: #ffffff;
+    z-index: 1;
+    top: 4em;
+    right: 0;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+  }
+}
