@@ -15,3 +15,30 @@
 .button.btn-login.btn-pass {
   margin-top: 2em !important;
 }
+
+@media screen and (max-width: 628px) {
+  .changePassDescSm {
+    font-weight: normal;
+    font-size: 0.9em;
+    line-height: 28px;
+    color: #7a7886;
+    margin: 0;
+    margin-bottom: 1.5em;
+  }
+  form {
+    width: 100%;
+  }
+  .form-change-pass {
+    width: 100%;
+  }
+  .input-form.pass,
+  .btn-change-pass {
+    width: 100%;
+  }
+  .btn-change-pass {
+    margin-top: 8em !important;
+  }
+  .eye-icon-pass {
+    right: 1.5em !important;
+  }
+}
