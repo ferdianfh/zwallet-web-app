@@ -36,7 +36,45 @@ const ChangePIN = () => {
   return (
     <Fragment>
       <div className="small-screen-content d-lg-none animation-pull-out">
-        <section className="profileContentSm d-flex flex-column justify-content-center align-items-center d-lg-none"></section>
+        <section className="profileContentSm d-flex flex-column justify-content-center align-items-center d-lg-none">
+          <p className="changePinDescSm">
+            Enter your current 6 digits Zwallet PIN below to continue to the
+            next steps.
+          </p>
+
+          {/* <!-- input form start here--> */}
+          <form onSubmit={handleSubmit} className="formPinSm">
+            <div className="d-flex flex-column justify-content-center align-items-center">
+              <div className="change-pin-container d-flex flex-row justify-content-around align-items-center">
+                {pin.map((pins, index) => (
+                  <Input
+                    name="pin"
+                    value={pins}
+                    onChange={(e) => handleChange(e.target, index)}
+                    onFocus={(e) => e.target.select()}
+                    className="change-pin-wrapper"
+                    type="text"
+                    maxLength="1"
+                    key={index}
+                  />
+                ))}
+              </div>
+
+              {errorMessage ? (
+                <p className="text-error mb-0">{errorMessage}</p>
+              ) : null}
+            </div>
+
+            <div className="btn-change-pin d-flex align-items-center">
+              <Button
+                isLoading={PinConfirmation.loading}
+                className="button btn-login btn-pin"
+              >
+                Continue
+              </Button>
+            </div>
+          </form>
+        </section>
       </div>
 
       <div className="big-screen-content d-none d-lg-block d-lg-flex mt-lg-2">

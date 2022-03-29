@@ -48,7 +48,45 @@ const NewPIN = () => {
   return (
     <Fragment>
       <div className="small-screen-content d-lg-none animation-pull-out">
-        <section className="profileContentSm d-flex flex-column justify-content-center align-items-center d-lg-none"></section>
+        <section className="profileContentSm d-flex flex-column justify-content-center align-items-center d-lg-none">
+          <p className="changePinDescSm">
+            Type your new 6 digits security PIN for transactions in Zwallet.
+          </p>
+
+          {/* <!-- input form start here--> */}
+
+          <form onSubmit={handleSubmit}>
+            <div className="d-flex flex-column justify-content-center align-items-center">
+              <div className="change-pin-container d-flex flex-row justify-content-around align-items-center">
+                {pin.map((pins, index) => (
+                  <Input
+                    name="pin"
+                    value={pins}
+                    onChange={(e) => handleChange(e.target, index)}
+                    onFocus={(e) => e.target.select()}
+                    className="change-pin-wrapper"
+                    type="text"
+                    maxLength="1"
+                    key={index}
+                  />
+                ))}
+              </div>
+
+              {errorMessage ? (
+                <p className="text-error mb-0">{errorMessage}</p>
+              ) : null}
+
+              <div className="btn-change-pin d-flex align-items-center">
+                <Button
+                  isLoading={newPinData.loading}
+                  className="button btn-login btn-pin"
+                >
+                  {user.PIN ? "Change PIN" : "Create PIN"}
+                </Button>
+              </div>
+            </div>
+          </form>
+        </section>
       </div>
 
       <div className="big-screen-content d-none d-lg-block d-lg-flex mt-lg-2">
@@ -102,17 +140,17 @@ const NewPIN = () => {
               </div>
             </form>
           </section>
-
-          {openModalSuccess ? (
-            <ModalSuccess
-              successTitle="Create PIN Success!"
-              successDesc="Your PIN is important for transactions and for secure your account. Don't let anyone know!"
-              action="Go back to Profile"
-              closeModal={handleNavigate}
-            />
-          ) : null}
         </section>
       </div>
+
+      {openModalSuccess ? (
+        <ModalSuccess
+          successTitle="Create PIN Success!"
+          successDesc="Your PIN is important for transactions and for secure your account. Don't let anyone know!"
+          action="Go back to Profile"
+          closeModal={handleNavigate}
+        />
+      ) : null}
     </Fragment>
   );
 };
