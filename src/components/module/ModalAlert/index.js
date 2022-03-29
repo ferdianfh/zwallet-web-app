@@ -8,7 +8,7 @@ const ModalAlert = ({ alertIcon, alertTitle, alertDesc, action, ...props }) => {
       <div className="modal-bg">
         <div className="modal-alert-container animation-pull-down">
           <section className="alert">
-            <div className="modal-alert-icon">
+            <div className="modal-alert-icon d-none d-md-block">
               <div
                 className={
                   action === "Delete"
