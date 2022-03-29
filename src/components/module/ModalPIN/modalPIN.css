@@ -120,3 +120,40 @@
   animation-timing-function: ease-out;
   animation-direction: alternate;
 }
+
+@media screen and (max-width: 628px) {
+  .modal-container {
+    height: 270px;
+    width: 300px;
+
+    padding: 1em;
+  }
+
+  .title-modal {
+    font-size: 0.875rem;
+  }
+  .close-icon {
+    font-size: 1.5rem;
+  }
+  .subtitle {
+    font-size: 0.8rem;
+    line-height: 1.5em;
+    margin: 0.5rem 0;
+  }
+  .pin-confirm-input {
+    padding: 0.4rem 0.2rem;
+    width: 35px;
+    height: 44px;
+    border-radius: 8px;
+    font-size: 1em;
+  }
+  .footer-modal {
+    margin-top: 1.6em;
+  }
+  .btn-pin-confirm {
+    width: 50%;
+    border-radius: 12px;
+    font-size: 1em;
+    padding: 0.5rem 0.7rem;
+  }
+}
