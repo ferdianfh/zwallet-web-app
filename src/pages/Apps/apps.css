@@ -16,7 +16,7 @@ body {
   color: #ff5b37;
 }
 .text-grey {
-  color: rgba(58, 61, 66, 0.4);
+  color: #3a3d4266;
 }
 .icons-size {
   font-size: 1.7em;
@@ -33,11 +33,6 @@ a {
 [class^="col"] {
   padding: 0.4em;
   margin-bottom: 0.5em;
-}
-.header-content {
-  background-color: #6379f4;
-  border-radius: 0px 0px 25px 25px;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 /* styling default mobile version */
@@ -75,6 +70,7 @@ button.topup-default {
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 0 0.3em;
 }
 .profile-desc-name {
   font-weight: bold;
@@ -169,6 +165,12 @@ button.calendar {
       width: 100%;
     } */
 
+  .header-content {
+    /* background-color: #6379f4; */
+    border-radius: 0px 0px 25px 25px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+  }
+
   .active-page {
     border-left: 3px solid #6379f4 !important;
     color: #6379f4 !important;
@@ -193,6 +195,33 @@ button.calendar {
     cursor: pointer;
     transform: scale(1.03);
     transition: 0.3s;
+  }
+}
+
+@media screen and (max-width: 628px) {
+  .balanceSm {
+    background-color: #6379f4;
+    border-radius: 20px;
+    padding: 1em 1.5em;
+  }
+  .saldoSm {
+    margin-left: 1em;
+  }
+  .saldoSm p {
+    margin: 0.5em 0;
+  }
+  .saldoText,
+  .phoneNumber {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #d0d0d0;
+  }
+  .saldoNominal {
+    font-weight: bold;
+    font-size: 1.75em;
+    line-height: 25px;
+    color: #ffffff;
   }
 }
 
