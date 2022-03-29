@@ -165,7 +165,7 @@
 
 /* =============================== PARTNER SECTION ========================================= */
 .partnerSection {
-  height: 38vh;
+  height: 100%;
   width: 100%;
   background-color: #473ad10f;
   padding: 3.5em 7.5em;
@@ -273,11 +273,11 @@
   }
 
   .iconCardWrapper {
-    padding: 0.35em 0.75em;
+    padding: 0.5em 0.75em;
     margin: 0.35em;
   }
   .aboutIcon {
-    font-size: 0.72em;
+    font-size: 1.1em;
   }
 
   .aboutAppCardTitle {
