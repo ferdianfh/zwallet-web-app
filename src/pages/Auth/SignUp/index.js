@@ -185,15 +185,14 @@ const SignUp = () => {
             >
               Sign Up
             </Button>
+            <p className="create mt-3 ">
+              Already have an account? Let's{" "}
+              <span className="create-account text-blue" onClick={toLoginPage}>
+                Login
+              </span>
+            </p>
           </form>
           {/* <!-- input form end here --> */}
-
-          <p className="create mt-5 ">
-            Already have an account? Let's{" "}
-            <span className="create-account text-blue" onClick={toLoginPage}>
-              Login
-            </span>
-          </p>
         </div>
       </section>
 
