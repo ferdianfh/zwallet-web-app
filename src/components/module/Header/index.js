@@ -79,6 +79,8 @@ const Header = () => {
                   ? "Change Password"
                   : pathname === "/apps/PIN/change"
                   ? "Change PIN"
+                  : pathname === "/apps/PIN/new"
+                  ? "Create PIN"
                   : pathname === "/apps/notifications"
                   ? "Notifications"
                   : "hehe"}
