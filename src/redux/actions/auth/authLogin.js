@@ -30,8 +30,8 @@ export const AuthLogin = ({ form, navigate, setErrorMessage }) => {
         const data = res.data.data;
         const token = data.token;
         localStorage.setItem("token", JSON.stringify(token));
-        navigate("/apps");
         dispatch(AuthLoginSuccess(data));
+        navigate("/apps");
       })
       .catch((err) => {
         const message = err.response;
