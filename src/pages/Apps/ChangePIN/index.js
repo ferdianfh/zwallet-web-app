@@ -7,6 +7,7 @@ import "./changePin.css";
 // redux
 import { useDispatch, useSelector } from "react-redux";
 import { PINConfirm } from "../../../redux/actions/apps/PINConfirm";
+import Sidebar from "../../../components/module/Sidebar";
 
 const ChangePIN = () => {
   const dispatch = useDispatch();
@@ -34,52 +35,59 @@ const ChangePIN = () => {
 
   return (
     <Fragment>
-      <section className="content-bar big-screen col-lg-8 animation-pull-out ">
-        <section className="change-pin-content d-flex flex-column">
-          <div className="change-pin-text">
-            <p className="change-pin-title">Change PIN</p>
-            <p className="change-pin-desc">
-              Enter your current 6 digits Zwallet PIN below to <br /> continue
-              to the next steps.
-            </p>
-          </div>
+      <div className="small-screen-content d-lg-none animation-pull-out">
+        <section className="profileContentSm d-flex flex-column justify-content-center align-items-center d-lg-none"></section>
+      </div>
 
-          {/* <!-- input form start here--> */}
-          <form onSubmit={handleSubmit}>
-            <div className="d-flex flex-column justify-content-center align-items-center">
-              <div className="change-pin-container d-flex flex-row justify-content-around align-items-center">
-                {/* <div className="change-pin-wrapper">
+      <div className="big-screen-content d-none d-lg-block d-lg-flex mt-lg-2">
+        <Sidebar />
+        <section className="content-bar big-screen col-lg-8 animation-pull-out ">
+          <section className="change-pin-content d-flex flex-column">
+            <div className="change-pin-text">
+              <p className="change-pin-title">Change PIN</p>
+              <p className="change-pin-desc">
+                Enter your current 6 digits Zwallet PIN below to <br /> continue
+                to the next steps.
+              </p>
+            </div>
+
+            {/* <!-- input form start here--> */}
+            <form onSubmit={handleSubmit}>
+              <div className="d-flex flex-column justify-content-center align-items-center">
+                <div className="change-pin-container d-flex flex-row justify-content-around align-items-center">
+                  {/* <div className="change-pin-wrapper">
             </div> */}
-                {pin.map((pins, index) => (
-                  <Input
-                    name="pin"
-                    value={pins}
-                    onChange={(e) => handleChange(e.target, index)}
-                    onFocus={(e) => e.target.select()}
-                    className="change-pin-wrapper"
-                    type="text"
-                    maxLength="1"
-                    key={index}
-                  />
-                ))}
+                  {pin.map((pins, index) => (
+                    <Input
+                      name="pin"
+                      value={pins}
+                      onChange={(e) => handleChange(e.target, index)}
+                      onFocus={(e) => e.target.select()}
+                      className="change-pin-wrapper"
+                      type="text"
+                      maxLength="1"
+                      key={index}
+                    />
+                  ))}
+                </div>
+
+                {errorMessage ? (
+                  <p className="text-error mb-0">{errorMessage}</p>
+                ) : null}
               </div>
 
-              {errorMessage ? (
-                <p className="text-error mb-0">{errorMessage}</p>
-              ) : null}
-            </div>
-
-            <div className="btn-change-pin d-flex align-items-center">
-              <Button
-                isLoading={PinConfirmation.loading}
-                className="button btn-login btn-pin"
-              >
-                Continue
-              </Button>
-            </div>
-          </form>
+              <div className="btn-change-pin d-flex align-items-center">
+                <Button
+                  isLoading={PinConfirmation.loading}
+                  className="button btn-login btn-pin"
+                >
+                  Continue
+                </Button>
+              </div>
+            </form>
+          </section>
         </section>
-      </section>
+      </div>
     </Fragment>
   );
 };

@@ -9,6 +9,7 @@ import ModalSuccess from "../../../components/module/ModalSuccess";
 // redux
 import { useDispatch, useSelector } from "react-redux";
 import { NewPassword } from "../../../redux/actions/apps/changePassword";
+import Sidebar from "../../../components/module/Sidebar";
 
 const ChangePassword = () => {
   const dispatch = useDispatch();
@@ -76,117 +77,124 @@ const ChangePassword = () => {
   };
   return (
     <Fragment>
-      <section className="content-bar big-screen col-lg-8 animation-pull-out ">
-        <section className="change-password-content d-flex flex-column">
-          <div className="change-pass-text">
-            <p className="change-pass-title">Change Password</p>
-            <p className="change-pass-desc">
-              You must enter your current password and then <br /> type your new
-              password twice.
-            </p>
-          </div>
+      <div className="small-screen-content d-lg-none animation-pull-out">
+        <section className="profileContentSm d-flex flex-column justify-content-center align-items-center d-lg-none"></section>
+      </div>
 
-          <form onSubmit={handleSubmit}>
-            <div className="form-change-pass d-flex flex-column justify-content-center align-items-center">
-              <div className="input-form pass d-flex mt-5">
-                <BsIcons.BsLock className="form-icons position-absolute" />
-                <Input
-                  name="currentPassword"
-                  value={form.currentPassword}
-                  onChange={handleChange}
-                  className="input-change-pass"
-                  placeholder="Current password"
-                  type={showPassword ? "text" : "password"}
-                />
-                {showPassword ? (
-                  <BsIcons.BsEyeSlash
-                    onClick={handleShowPassword}
-                    className="form-icons eye-icon-pass bi-eye-slash position-absolute"
-                  />
-                ) : (
-                  <BsIcons.BsEye
-                    onClick={handleShowPassword}
-                    className="form-icons eye-icon-pass bi-eye-slash position-absolute"
-                  />
-                )}
-              </div>
-              <p className="text-error mb-0">{formError.currentPassword}</p>
-
-              <div className="input-form pass d-flex mt-4">
-                <BsIcons.BsLock className="form-icons position-absolute" />
-                <Input
-                  name="newPassword"
-                  value={form.newPassword}
-                  onChange={handleChange}
-                  className="input-change-pass"
-                  placeholder="New password"
-                  type={showPassword ? "text" : "password"}
-                />
-                {showPassword ? (
-                  <BsIcons.BsEyeSlash
-                    onClick={handleShowPassword}
-                    className="form-icons eye-icon-pass bi-eye-slash position-absolute"
-                  />
-                ) : (
-                  <BsIcons.BsEye
-                    onClick={handleShowPassword}
-                    className="form-icons eye-icon-pass bi-eye-slash position-absolute"
-                  />
-                )}
-              </div>
-              <p className="text-error error-validation mb-0">
-                {formError.newPassword}
+      <div className="big-screen-content d-none d-lg-block d-lg-flex mt-lg-2">
+        <Sidebar />
+        <section className="content-bar big-screen col-lg-8 animation-pull-out ">
+          <section className="change-password-content d-flex flex-column">
+            <div className="change-pass-text">
+              <p className="change-pass-title">Change Password</p>
+              <p className="change-pass-desc">
+                You must enter your current password and then <br /> type your
+                new password twice.
               </p>
-
-              <div className="input-form pass d-flex mt-4">
-                <BsIcons.BsLock className="form-icons position-absolute" />
-                <Input
-                  name="repeatNewPassword"
-                  value={form.repeatNewPassword}
-                  onChange={handleChange}
-                  className="input-change-pass"
-                  placeholder="Repeat new password"
-                  type={showPassword ? "text" : "password"}
-                />
-                {showPassword ? (
-                  <BsIcons.BsEyeSlash
-                    onClick={handleShowPassword}
-                    className="form-icons eye-icon-pass bi-eye-slash position-absolute"
-                  />
-                ) : (
-                  <BsIcons.BsEye
-                    onClick={handleShowPassword}
-                    className="form-icons eye-icon-pass bi-eye-slash position-absolute"
-                  />
-                )}
-              </div>
-              <p className="text-error mb-0">{formError.repeatNewPassword}</p>
-
-              {errorMessage ? (
-                <p className="text-error mb-0">{errorMessage}</p>
-              ) : null}
-
-              <div className="btn-change-pass d-flex align-items-center mt-0">
-                <Button
-                  isLoading={newPasswordData.loading}
-                  className="button btn-login btn-pass"
-                >
-                  Change Password
-                </Button>
-              </div>
             </div>
-          </form>
-        </section>
 
-        {openModalSuccess ? (
-          <ModalSuccess
-            successTitle="Change Password Success!"
-            successDesc="Since your password has been changed, make sure to remember the new one!"
-            action="Go back to Profile"
-            closeModal={handleNavigate}
-          />
-        ) : null}
-      </section>
+            <form onSubmit={handleSubmit}>
+              <div className="form-change-pass d-flex flex-column justify-content-center align-items-center">
+                <div className="input-form pass d-flex mt-5">
+                  <BsIcons.BsLock className="form-icons position-absolute" />
+                  <Input
+                    name="currentPassword"
+                    value={form.currentPassword}
+                    onChange={handleChange}
+                    className="input-change-pass"
+                    placeholder="Current password"
+                    type={showPassword ? "text" : "password"}
+                  />
+                  {showPassword ? (
+                    <BsIcons.BsEyeSlash
+                      onClick={handleShowPassword}
+                      className="form-icons eye-icon-pass bi-eye-slash position-absolute"
+                    />
+                  ) : (
+                    <BsIcons.BsEye
+                      onClick={handleShowPassword}
+                      className="form-icons eye-icon-pass bi-eye-slash position-absolute"
+                    />
+                  )}
+                </div>
+                <p className="text-error mb-0">{formError.currentPassword}</p>
+
+                <div className="input-form pass d-flex mt-4">
+                  <BsIcons.BsLock className="form-icons position-absolute" />
+                  <Input
+                    name="newPassword"
+                    value={form.newPassword}
+                    onChange={handleChange}
+                    className="input-change-pass"
+                    placeholder="New password"
+                    type={showPassword ? "text" : "password"}
+                  />
+                  {showPassword ? (
+                    <BsIcons.BsEyeSlash
+                      onClick={handleShowPassword}
+                      className="form-icons eye-icon-pass bi-eye-slash position-absolute"
+                    />
+                  ) : (
+                    <BsIcons.BsEye
+                      onClick={handleShowPassword}
+                      className="form-icons eye-icon-pass bi-eye-slash position-absolute"
+                    />
+                  )}
+                </div>
+                <p className="text-error error-validation mb-0">
+                  {formError.newPassword}
+                </p>
+
+                <div className="input-form pass d-flex mt-4">
+                  <BsIcons.BsLock className="form-icons position-absolute" />
+                  <Input
+                    name="repeatNewPassword"
+                    value={form.repeatNewPassword}
+                    onChange={handleChange}
+                    className="input-change-pass"
+                    placeholder="Repeat new password"
+                    type={showPassword ? "text" : "password"}
+                  />
+                  {showPassword ? (
+                    <BsIcons.BsEyeSlash
+                      onClick={handleShowPassword}
+                      className="form-icons eye-icon-pass bi-eye-slash position-absolute"
+                    />
+                  ) : (
+                    <BsIcons.BsEye
+                      onClick={handleShowPassword}
+                      className="form-icons eye-icon-pass bi-eye-slash position-absolute"
+                    />
+                  )}
+                </div>
+                <p className="text-error mb-0">{formError.repeatNewPassword}</p>
+
+                {errorMessage ? (
+                  <p className="text-error mb-0">{errorMessage}</p>
+                ) : null}
+
+                <div className="btn-change-pass d-flex align-items-center mt-0">
+                  <Button
+                    isLoading={newPasswordData.loading}
+                    className="button btn-login btn-pass"
+                  >
+                    Change Password
+                  </Button>
+                </div>
+              </div>
+            </form>
+          </section>
+
+          {openModalSuccess ? (
+            <ModalSuccess
+              successTitle="Change Password Success!"
+              successDesc="Since your password has been changed, make sure to remember the new one!"
+              action="Go back to Profile"
+              closeModal={handleNavigate}
+            />
+          ) : null}
+        </section>
+      </div>
     </Fragment>
   );
 };

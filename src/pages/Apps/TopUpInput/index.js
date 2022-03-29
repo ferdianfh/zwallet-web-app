@@ -11,6 +11,7 @@ import ModalSuccess from "../../../components/module/ModalSuccess";
 import { useDispatch, useSelector } from "react-redux";
 import { TopupInput } from "../../../redux/actions/apps/topupInput";
 import { TopupConfirmation } from "../../../redux/actions/apps/topupConfirmation";
+import Sidebar from "../../../components/module/Sidebar";
 
 const TopUpInput = () => {
   const dispatch = useDispatch();
@@ -95,89 +96,99 @@ const TopUpInput = () => {
 
   return (
     <Fragment>
-      <section className="content-bar big-screen col-lg-8 animation-pull-out ">
-        <p className="topup-input-text topup-text ms-4 mt-3">Top Up Balance</p>
+      <div className="small-screen-content d-lg-none animation-pull-out">
+        <section className="profileContentSm d-flex flex-column justify-content-center align-items-center d-lg-none"></section>
+      </div>
 
-        <p className="topup-input-desc ms-4">
-          Type the amount of money to topup and then press Top Up button. <br />{" "}
-          Min. Top Up Rp10,000. <br /> Max. Top Up Rp200,000.
-        </p>
+      <div className="big-screen-content d-none d-lg-block d-lg-flex mt-lg-2">
+        <Sidebar />
 
-        <form onSubmit={handleSubmit}>
-          <div className="input-amount-money topup-form mb-2 ">
-            <Input
-              name="amount_topup"
-              value={topupForm.amount_topup}
-              onChange={handleChange}
-              className="input-amount text-center bg-transparent"
-              placeholder="0.00"
-              type="number"
-            />
-          </div>
+        <section className="content-bar big-screen col-lg-8 animation-pull-out ">
+          <p className="topup-input-text topup-text ms-4 mt-3">
+            Top Up Balance
+          </p>
 
-          {errorMessage ? (
+          <p className="topup-input-desc ms-4">
+            Type the amount of money to topup and then press Top Up button.{" "}
+            <br /> Min. Top Up Rp10,000. <br /> Max. Top Up Rp200,000.
+          </p>
+
+          <form onSubmit={handleSubmit}>
+            <div className="input-amount-money topup-form mb-2 ">
+              <Input
+                name="amount_topup"
+                value={topupForm.amount_topup}
+                onChange={handleChange}
+                className="input-amount text-center bg-transparent"
+                placeholder="0.00"
+                type="number"
+              />
+            </div>
+
+            {errorMessage ? (
+              <p className="text-error text-error-transfer mb-0">
+                {errorMessage}
+              </p>
+            ) : null}
             <p className="text-error text-error-transfer mb-0">
-              {errorMessage}
+              {formError.amount_topup}
             </p>
-          ) : null}
-          <p className="text-error text-error-transfer mb-0">
-            {formError.amount_topup}
-          </p>
 
-          <p className="text-title-name balance-info text-center mt-4">
-            Zwallet Balance: Rp {profile.balance}
-          </p>
+            <p className="text-title-name balance-info text-center mt-4">
+              Zwallet Balance: Rp {profile.balance}
+            </p>
 
-          <div className="button-topup">
-            <Button
-              isLoading={topupInputData.loading}
-              type="submit"
-              className="button btn-login btn-topup text-white p-2"
+            <div className="button-topup">
+              <Button
+                isLoading={topupInputData.loading}
+                type="submit"
+                className="button btn-login btn-topup text-white p-2"
+              >
+                Top Up
+              </Button>
+            </div>
+          </form>
+
+          {openModalPIN ? (
+            <ModalPIN
+              modalTitle="Enter PIN to Top Up"
+              modalSubtitle="Enter your 6 Digits PIN for confirmation to continue Top Up. "
+              closeModal={handleModalPIN}
+              handleAction={handleSubmitPIN}
+              isLoading={topupConfirmData.loading}
             >
-              Top Up
-            </Button>
-          </div>
-        </form>
+              <form onSubmit={handleSubmitPIN}>
+                <div className="pin-confirm-wrapper">
+                  {pin.map((pins, index) => (
+                    <Input
+                      name="pin"
+                      value={pins}
+                      onChange={(e) => handleChangePIN(e.target, index)}
+                      onFocus={(e) => e.target.select()}
+                      className="pin-confirm-input"
+                      type="text"
+                      maxLength="1"
+                      key={index}
+                    />
+                  ))}
+                </div>
+                {errorMessagePIN ? (
+                  <p className="text-error mb-0">{errorMessagePIN}</p>
+                ) : null}
+              </form>
+            </ModalPIN>
+          ) : null}
 
-        {openModalPIN ? (
-          <ModalPIN
-            modalTitle="Enter PIN to Top Up"
-            modalSubtitle="Enter your 6 Digits PIN for confirmation to continue Top Up. "
-            closeModal={handleModalPIN}
-            handleAction={handleSubmitPIN}
-            isLoading={topupConfirmData.loading}
-          >
-            <form onSubmit={handleSubmitPIN}>
-              <div className="pin-confirm-wrapper">
-                {pin.map((pins, index) => (
-                  <Input
-                    name="pin"
-                    value={pins}
-                    onChange={(e) => handleChangePIN(e.target, index)}
-                    onFocus={(e) => e.target.select()}
-                    className="pin-confirm-input"
-                    type="text"
-                    maxLength="1"
-                    key={index}
-                  />
-                ))}
-              </div>
-              {errorMessagePIN ? (
-                <p className="text-error mb-0">{errorMessagePIN}</p>
-              ) : null}
-            </form>
-          </ModalPIN>
-        ) : null}
-
-        {openModalSuccess ? (
-          <ModalSuccess
-            successTitle="Top Up Success!"
-            successDesc={`Amount Top Up ${topupForm.amount_topup} successfully added to your Balance.`}
-            action="Go back to Dashboard"
-            closeModal={handleNavigate}
-          />
-        ) : null}
-      </section>
+          {openModalSuccess ? (
+            <ModalSuccess
+              successTitle="Top Up Success!"
+              successDesc={`Amount Top Up ${topupForm.amount_topup} successfully added to your Balance.`}
+              action="Go back to Dashboard"
+              closeModal={handleNavigate}
+            />
+          ) : null}
+        </section>
+      </div>
     </Fragment>
   );
 };

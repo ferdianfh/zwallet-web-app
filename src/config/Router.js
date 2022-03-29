@@ -29,6 +29,7 @@ import ProfilePicture from "../pages/Apps/ProfilePicture";
 import SignUpSuccess from "../pages/Auth/SignUpSuccess";
 import CreatePINSuccess from "../pages/Auth/CreatePINSuccess";
 import { LandingPage } from "../pages/LandingPage/LandingPage";
+import { NotificationMobile } from "../pages/mobile/Notification";
 // import RequireAuth from "./components/base/RequireAuth";
 
 const Router = () => {
@@ -68,6 +69,8 @@ const Router = () => {
           <Route path={"password/change"} element={<ChangePassword />} />
           <Route path={"PIN/change"} element={<ChangePIN />} />
           <Route path={"PIN/new"} element={<NewPIN />} />
+
+          <Route path={"notifications"} element={<NotificationMobile />} />
 
           <Route index element={<Navigate to="/apps" />} />
         </Route>
