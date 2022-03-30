@@ -44,7 +44,78 @@ const Receiver = () => {
   return (
     <Fragment>
       <div className="small-screen-content d-lg-none animation-pull-out">
-        <section className="profileContentSm d-flex flex-column justify-content-center align-items-center d-lg-none"></section>
+        <section className="profileContentSm d-flex flex-column justify-content-center align-items-center d-lg-none">
+          {/* search receiver input for mobile */}
+          <div className="search-receiver inputReceiverWrapperSm d-flex align-items-center bg-input">
+            <BsIcons.BsSearch className="icons-size text-grey ms-3" />
+            <Input
+              name="search"
+              id="search"
+              type="text"
+              className="ms-3 p-2 text-grey bg-search-input search-receiver-input desktop"
+              placeholder="Search receiver here"
+              onKeyUp={handleSearch}
+            />
+          </div>
+
+          <div className="d-flex flex-start w-100 mt-4">
+            <p className="history-title contactTitleSm">All Contacts</p>
+          </div>
+
+          {querySearch
+            ? searchReceiver.data.map((receiver, index) => (
+                <div
+                  key={receiver.id}
+                  onClick={() => navigate(`/apps/transfer/${receiver.id}`)}
+                  className="d-flex receivers p-1 mb-3 ms-3 me-3 "
+                >
+                  <img
+                    className="receiver-picture user-pic mt-2 ms-4"
+                    src={receiver.picture ? receiver.picture : img}
+                    height="54px"
+                    alt="User"
+                  />
+                  <div className="receiver-detail mt-2 ms-3">
+                    <p className="text-title-name mb-0">
+                      {receiver.first_name} {receiver.last_name}
+                    </p>
+                    <p className="weekly mt-1">
+                      {receiver.phone
+                        ? `+62 ${receiver.phone}`
+                        : "+ Add phone number"}
+                    </p>
+                  </div>
+                </div>
+              ))
+            : getReceivers.data.map((receiver, index) => {
+                if (receiver.id !== profile.id && receiver.role !== "admin") {
+                  return (
+                    <div
+                      key={receiver.id}
+                      onClick={() => navigate(`/apps/transfer/${receiver.id}`)}
+                      className="d-flex receivers p-1 mb-3 ms-3 me-3 "
+                    >
+                      <img
+                        className="receiver-picture user-pic mt-2 ms-4"
+                        src={receiver.picture ? receiver.picture : img}
+                        height="54px"
+                        alt="User"
+                      />
+                      <div className="receiver-detail mt-2 ms-3">
+                        <p className="text-title-name mb-0">
+                          {receiver.first_name} {receiver.last_name}
+                        </p>
+                        <p className="weekly mt-1">
+                          {receiver.phone
+                            ? `+62 ${receiver.phone}`
+                            : "+ Add phone number"}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                }
+              })}
+        </section>
       </div>
 
       <div className="big-screen-content d-none d-lg-block d-lg-flex mt-lg-2">
