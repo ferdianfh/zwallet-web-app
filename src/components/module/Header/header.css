@@ -49,9 +49,11 @@
     border-radius: 5px;
     height: 53px;
     object-fit: cover;
+    cursor: pointer;
   }
   .greetingWrapper {
     margin-left: -6.5em;
+    cursor: pointer;
   }
   .greetingText,
   .notifIcon {
@@ -61,6 +63,10 @@
     color: #4d4b57;
     font-size: 1.25em;
     font-weight: 700;
+  }
+  .notifIcon:hover {
+    color: #6379f4;
+    cursor: pointer;
   }
 
   .navbarSmv2 {
@@ -73,6 +79,7 @@
   .goBackIcon {
     font-size: 1.5em;
     color: #4d4b57;
+    cursor: pointer;
   }
   .titlePageSm {
     font-size: 1.1em;
@@ -83,6 +90,7 @@
   .moreOptionsMenu {
     font-size: 1.27em;
     color: #4d4b57;
+    cursor: pointer;
   }
   .moreOptionsBg {
     height: 100%;

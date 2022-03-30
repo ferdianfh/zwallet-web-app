@@ -65,6 +65,16 @@ const Header = () => {
               <p className="titlePageSm">
                 {pathname === "/apps/history"
                   ? "History"
+                  : pathname === "/apps/topup"
+                  ? "Top Up Method"
+                  : pathname === "/apps/topup/input"
+                  ? "Top Up Input"
+                  : pathname === "/apps/receivers"
+                  ? "Find Receiver"
+                  : pathname === "/apps/confirmation"
+                  ? "Transfer Confirmation"
+                  : pathname === "/apps/status"
+                  ? "Transfer Status"
                   : pathname === "/apps/profile"
                   ? "Profile"
                   : pathname === "/apps/profile/picture"
@@ -83,7 +93,7 @@ const Header = () => {
                   ? "Create PIN"
                   : pathname === "/apps/notifications"
                   ? "Notifications"
-                  : "hehe"}
+                  : "Transfer"}
               </p>
             </div>
 
