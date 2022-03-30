@@ -27,7 +27,76 @@ const TopUp = () => {
   return (
     <Fragment>
       <div className="small-screen-content d-lg-none animation-pull-out">
-        <section className="profileContentSm d-flex flex-column justify-content-center align-items-center d-lg-none"></section>
+        <section className="profileContentSm d-flex flex-column justify-content-center align-items-center d-lg-none">
+          <p className="topup-input-desc ">
+            Choose topup method below and then press Continue button. Due to
+            several reasons we recommend you to choose
+            <strong> Instant Top Up/Cash </strong> method.
+          </p>
+
+          <div className="topup-method-form mt-3 d-flex flex-column flex-wrap d-flex justify-content-center align-items-center">
+            <div className="topup-method-wrapper ">
+              <label htmlFor="virtual-account" className="topup-method">
+                <Input
+                  value="Virtual Account"
+                  onChange={handleChange}
+                  checked={topUpMethod === "Virtual Account"}
+                  type="radio"
+                  name="topUpMethod"
+                  id="virtual-account"
+                  className="topup__method__input"
+                />
+                <div className="topup__method__radio"></div>
+                <BsIcons.BsBank className="radio-icon mt-0 ms-2 me-2" />
+                <span className="radio-label">Virtual Account</span>
+              </label>
+            </div>
+
+            <div className="topup-method-wrapper ">
+              <label htmlFor="debit-card" className="topup-method">
+                <Input
+                  value="Debit Card"
+                  onChange={handleChange}
+                  checked={topUpMethod === "Debit Card"}
+                  type="radio"
+                  name="topUpMethod"
+                  id="debit-card"
+                  className="topup__method__input"
+                />
+                <div className="topup__method__radio"></div>
+                <BsIcons.BsCreditCard className="radio-icon mt-0 ms-2 me-2" />
+                <span className="radio-label">Debit Card</span>
+              </label>
+            </div>
+
+            <div className="topup-method-wrapper ">
+              <label htmlFor="cash" className="topup-method">
+                <Input
+                  value="Instant Top Up / Cash"
+                  onChange={handleChange}
+                  checked={topUpMethod === "Instant Top Up / Cash"}
+                  type="radio"
+                  name="topUpMethod"
+                  id="cash"
+                  className="topup__method__input"
+                />
+                <div className="topup__method__radio"></div>
+                <BsIcons.BsCashStack className="radio-icon mt-0 ms-2 me-2" />
+                <span className="radio-label">Instant Top Up / Cash</span>
+              </label>
+            </div>
+          </div>
+
+          <div className="btn-topup-method mt-5 d-flex flex-end">
+            <Button
+              isLoading={topupMethodData.loading}
+              onClick={handleClick}
+              className="btn-method-continue"
+            >
+              Continue
+            </Button>
+          </div>
+        </section>
       </div>
 
       <div className="big-screen-content d-none d-lg-block d-lg-flex mt-lg-2">
