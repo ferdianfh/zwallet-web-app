@@ -67,7 +67,78 @@ const Transfer = () => {
     <Fragment>
       {/* main content for mobile */}
       <div className="small-screen-content d-lg-none animation-pull-out">
-        <section className="profileContentSm d-flex flex-column justify-content-center align-items-center d-lg-none"></section>
+        <section className="profileContentSm d-flex flex-column justify-content-center align-items-center d-lg-none">
+          {/* receiver mobile layout */}
+          <div className="d-flex receivers  ">
+            <img
+              className="receiver-picture user-pic mt-2 ms-4"
+              src={receiver.picture ? receiver.picture : img}
+              height="54px"
+              alt="Samuel"
+            />
+            <div className="receiver-detail ms-3 mt-2">
+              <p className="text-title-name mb-0">
+                {receiver.first_name} {receiver.last_name}
+              </p>
+              <p className="weekly mt-1">
+                {receiver.phone
+                  ? `+62 ${receiver.phone}`
+                  : "+ Add phone number"}
+              </p>
+            </div>
+          </div>
+
+          {/* form transfer mobile */}
+          <form onSubmit={handleSubmit}>
+            <p className="text-title-name text-center mt-3">
+              Rp {profile.balance} Available
+            </p>
+
+            {/* <!-- input amount money for mobile --> */}
+            <div className="input-amount-money mb-2 mt-3">
+              <Input
+                name="amountTransfer"
+                value={form.amountTransfer}
+                onChange={handleChange}
+                className=" input-amount text-center bg-transparent"
+                placeholder="0.00"
+                type="number"
+              />
+            </div>
+
+            {errorMessage ? (
+              <p className="text-error text-error-transfer mb-0">
+                {errorMessage}
+              </p>
+            ) : null}
+            <p className="text-error text-error-transfer mb-0">
+              {formError.amountTransfer}
+            </p>
+
+            <div className="input-notes notes-position d-flex mt-4 w-100 ">
+              <BsIcons.BsPen className="pen text-grey position-absolute ms-1" />
+              <Input
+                name="notes"
+                value={form.notes}
+                onChange={handleChange}
+                className="ps-5 p-1 w-100 bg-transparent"
+                placeholder="Add some notes"
+                type="text"
+                id="notes"
+              />
+            </div>
+
+            {/* <!-- button continue for mobile --> */}
+            <div className="btn-continue-desktop d-flex justify-content-end ms-5 me-5">
+              <Button
+                isLoading={transferData.loading}
+                className="button btn-continue-transfer text-white w-100 p-2"
+              >
+                Continue
+              </Button>
+            </div>
+          </form>
+        </section>
       </div>
 
       {/* main content for desktop */}
