@@ -80,7 +80,7 @@ export const LandingPage = () => {
               Awesome App <br /> For Saving{" "}
               <span className="text-blue">Time.</span>
             </h1>
-            <p>
+            <p className={styles.heroDesc}>
               We bring you a website app for banking problems that oftenly
               wasting much of your times.
             </p>
