@@ -203,6 +203,7 @@ button.calendar {
     background-color: #6379f4;
     border-radius: 20px;
     padding: 1em 1.5em;
+    cursor: pointer;
   }
   .saldoSm {
     margin-left: 1em;
@@ -222,6 +223,42 @@ button.calendar {
     font-size: 1.75em;
     line-height: 25px;
     color: #ffffff;
+  }
+}
+
+/* History Transaction */
+
+@media screen and (max-width: 628px) {
+  .no-transactions-icon {
+    font-size: 3.75em;
+    margin-top: 1.25em;
+    color: #b3b3b6;
+  }
+  .no-transactions-text {
+    color: #b4b4b4;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  .history-transaction-profiles {
+    width: 100%;
+    padding: 0.5em 0.7em;
+  }
+  .amountMoneySm {
+    font-size: 0.87em;
+  }
+  .btnFilterByDateSm {
+    background-color: #ffffff;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    padding: 0.7em 1.2em;
+    font-size: 1.075em;
+  }
+  .btnFilterByTypeSm {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    padding: 0.7em 1.2em;
+    font-size: 1.075em;
+    font-weight: bold;
   }
 }
 
@@ -260,6 +297,23 @@ button.calendar {
 }
 .receivers:active {
   background-color: #eeecec;
+}
+
+@media screen and (max-width: 628px) {
+  .search-receiver {
+    width: 100%;
+  }
+  .receivers {
+    width: 100%;
+    padding: 0.1em !important;
+  }
+
+  .text-title-name {
+    font-size: 0.9em;
+  }
+  .weekly {
+    font-size: 0.7em;
+  }
 }
 
 /* ================== TRANSFER INPUT PAGE ==================== */
@@ -342,6 +396,16 @@ input::-webkit-inner-spin-button {
   transition: 0.3s;
 }
 
+@media screen and (max-width: 628px) {
+  .input-notes {
+    margin-top: 5em;
+    margin-left: 0 !important;
+  }
+  .btn-continue-desktop {
+    margin-top: 10em;
+  }
+}
+
 /* ================== TRANSFER CONFIRMATION PAGE ==================== */
 
 .details-transfer {
@@ -372,6 +436,24 @@ input::-webkit-inner-spin-button {
   background-color: #ffffff;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
+}
+
+@media screen and (max-width: 628px) {
+  .history-title {
+    font-size: 1.05em;
+  }
+  .text-title {
+    font-size: 0.89em;
+  }
+  .text-content {
+    font-size: 1em;
+  }
+  .confirm-items {
+    margin-bottom: 1.2em;
+  }
+  .btnConfirmSm {
+    padding: 0.8em;
+  }
 }
 
 /* ================== TRANSFER STATUS PAGE ==================== */
@@ -421,4 +503,10 @@ input::-webkit-inner-spin-button {
 .btn-back-home:active {
   background-color: #384fd3;
   transition: 0.4s;
+}
+
+@media screen and (max-width: 628px) {
+  .btn-back-home {
+    padding: 0.8em 2em;
+  }
 }

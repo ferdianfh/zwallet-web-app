@@ -1,16 +1,17 @@
 /* eslint-disable array-callback-return */
+import axios from "axios";
 import React, { Fragment, useEffect, useState } from "react";
-// import "./dashboard.css";
+import { Link, useNavigate } from "react-router-dom";
 import Balance from "../../../components/module/Balance";
 import Chart from "../../../components/module/Charts";
 import History from "../../../components/module/History";
+import Button from "../../../components/base/Button";
+import Sidebar from "../../../components/module/Sidebar";
+import img from "../../../assets/img/blank-profile-picture.png";
 import * as BsIcons from "react-icons/bs";
 import * as AiIcons from "react-icons/ai";
 import * as RiIcons from "react-icons/ri";
-import Sidebar from "../../../components/module/Sidebar";
-import axios from "axios";
-import img from "../../../assets/img/blank-profile-picture.png";
-import { Link } from "react-router-dom";
+// import "./dashboard.css";
 
 // redux
 import { useDispatch, useSelector } from "react-redux";
@@ -23,6 +24,7 @@ const Dashboard = () => {
 
   const token = JSON.parse(localStorage.getItem("token"));
   const [history, setHistory] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(GetProfile());
@@ -52,14 +54,20 @@ const Dashboard = () => {
 
       {/* <!-- button for xs, sm, md version --> */}
       <div className="btn btn-transaction d-flex flex-row mt-3 d-lg-none animation-pull-out">
-        <button className="transfer-default d-flex flex-row justify-content-evenly align-items-center m-1">
+        <Button
+          onClick={() => navigate("/apps/receivers")}
+          className="transfer-default d-flex flex-row justify-content-evenly align-items-center m-1"
+        >
           <BsIcons.BsArrowUp className="icons-size text-blue" />
           <p className="mt-3">Transfer</p>
-        </button>
-        <button className="topup-default d-flex flex-row justify-content-evenly align-items-center m-1">
+        </Button>
+        <Button
+          onClick={() => navigate("/apps/topup")}
+          className="topup-default d-flex flex-row justify-content-evenly align-items-center m-1"
+        >
           <AiIcons.AiOutlinePlus className="icons-size text-blue" />
           <p className="mt-3">Top Up</p>
-        </button>
+        </Button>
       </div>
 
       {/* <!-- main content for xs, sm, md --> */}
