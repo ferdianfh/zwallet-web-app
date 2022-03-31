@@ -88,31 +88,9 @@
     margin: 0 1.2em;
   }
   .moreOptionsMenu {
-    font-size: 1.27em;
+    font-size: 1.47em;
     color: #4d4b57;
     cursor: pointer;
-  }
-  .moreOptionsBg {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background: transparent;
-    position: fixed;
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .OptionMenuWrapperSm {
-    background-color: darkorange;
-    height: 180px;
-    width: 175px;
-    position: relative;
-    background: #ffffff;
-    z-index: 1;
-    top: 4em;
-    right: 0;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
-    border-radius: 10px;
+    margin-right: -2em;
   }
 }

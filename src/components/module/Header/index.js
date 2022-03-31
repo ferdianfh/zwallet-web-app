@@ -1,9 +1,10 @@
 import React, { Fragment, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import * as BsIcons from "react-icons/bs";
 import * as FiIcons from "react-icons/fi";
 import img from "../../../assets/img/blank-profile-picture.png";
 import "./header.css";
-import { useLocation, useNavigate } from "react-router-dom";
+import MenuOptions from "../../mobile/MenuOptions";
 
 // redux
 import { useDispatch, useSelector } from "react-redux";
@@ -100,10 +101,7 @@ const Header = () => {
               </p>
             </div>
 
-            <BsIcons.BsThreeDotsVertical
-              // onClick={showMoreOptions}
-              className="moreOptionsMenu"
-            />
+            <MenuOptions />
           </nav>
         )}
 
