@@ -40,6 +40,7 @@ const Header = () => {
               src={profile.picture ? profile.picture : img}
               alt="ProfilePicture"
               height={53}
+              width={53}
             />
             <div
               onClick={() => navigate("/apps/profile")}
@@ -51,7 +52,7 @@ const Header = () => {
               </p>
             </div>
             <BsIcons.BsBell
-              onClick={() => navigate("/apps/notifications")}
+              onClick={() => navigate("/apps/mobile/notifications")}
               className="notifIcon d-md-none icons-size mt-2 me-2"
             />
           </nav>
@@ -91,7 +92,9 @@ const Header = () => {
                   ? "Change PIN"
                   : pathname === "/apps/PIN/new"
                   ? "Create PIN"
-                  : pathname === "/apps/notifications"
+                  : pathname === "/apps/mobile/transactions/details"
+                  ? "Transaction Details"
+                  : pathname === "/apps/mobile/notifications"
                   ? "Notifications"
                   : "Transfer"}
               </p>

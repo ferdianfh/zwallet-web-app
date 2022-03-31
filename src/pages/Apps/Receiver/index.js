@@ -72,7 +72,8 @@ const Receiver = () => {
                   <img
                     className="receiver-picture user-pic mt-2 ms-4"
                     src={receiver.picture ? receiver.picture : img}
-                    height="54px"
+                    height={54}
+                    width={54}
                     alt="User"
                   />
                   <div className="receiver-detail mt-2 ms-3">

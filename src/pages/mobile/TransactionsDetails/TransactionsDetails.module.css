@@ -1,0 +1,99 @@
+@media screen and (max-width: 628px) {
+  .detailsTransactionContentSm {
+    width: 100%;
+    padding: 0.9em;
+    /* background-color: darkorange; */
+  }
+  .incomeExpenseWrapper {
+    background-color: #6379f4;
+    border-radius: 20px;
+    padding: 1.5em 0.875em;
+  }
+  .titleSm {
+    color: #d0d0d0;
+    font-size: 1em;
+    margin: 0;
+  }
+  .nominal {
+    font-size: 1.25em;
+    margin: 0;
+  }
+  .incomeIcon {
+    color: #4cedb3;
+    font-size: 1.3em;
+    font-weight: 800;
+  }
+  .expenseIcon {
+    color: #ff5b37;
+    font-size: 1.3em;
+    font-weight: 800;
+  }
+
+  .chartTitle {
+    font-weight: 700;
+    font-size: 1.12em;
+    color: #514f5b;
+  }
+  .noChartIcon {
+    font-size: 8em;
+    color: #b3b3b6;
+  }
+  .noChartText {
+    color: #b4b4b4;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+
+  .link {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #6379f4;
+  }
+  .link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .historyProfiles {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+    padding: 0.3em 0.25em;
+    margin-bottom: 1.2em;
+  }
+  .userPic {
+    border-radius: 5px;
+    height: 53px;
+    object-fit: cover;
+  }
+  .profilesInfoWrapper {
+    margin: 1em 0 1em -0.5em;
+  }
+  .profilesInfoWrapper p {
+    margin: 0;
+  }
+  .profileName {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    color: #4d4b57;
+  }
+  .date {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #7a7886;
+  }
+
+  .noTransactionIcon {
+    font-size: 4.5em;
+    margin-top: 1.25em;
+    color: #b3b3b6;
+  }
+  .noTransactionText {
+    color: #b4b4b4;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+}

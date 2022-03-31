@@ -45,7 +45,10 @@ const Dashboard = () => {
   return (
     <Fragment>
       <section className="balanceSm d-flex flex-column d-lg-none ">
-        <div className="saldoSm">
+        <div
+          onClick={() => navigate("/apps/mobile/transactions/details")}
+          className="saldoSm"
+        >
           <p className="saldoText">Balance</p>
           <p className="saldoNominal">Rp {profile.balance}</p>
           <p className="phoneNumber">+62 {profile.phone}</p>
