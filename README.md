@@ -27,7 +27,7 @@
 
 ## About The Project
 
-[![Zwallet Landing Page][./src/assets/snippets/zwallet-landing-page.png]](https://zwallet-web-app.netlify.app)
+![Zwallet Landing Page](./src/assets/snippets/zwallet-landing-page.png)
 
 **Zwallet** is A Website Based Application that offering the simplicity and rapidity for anything related to banking needs, such as, Top Up and Transfer activity.
 
@@ -37,12 +37,12 @@
 
 This app was built with some technologies
 
-- [React.js](https://reactjs.org/)
-- [Vue.js](https://vuejs.org/)
-- [Angular](https://angular.io/)
-- [Svelte](https://svelte.dev/)
-- [Laravel](https://laravel.com)
+- [ReactJS](https://reactjs.org/)
+- [Redux](https://redux.js.org/)
+- [Axios](https://axios-http.com/)
 - [Bootstrap](https://getbootstrap.com)
+- [Netlify](https://www.netlify.com/)
+- [Backend APIs](https://github.com/ferdianfh/RESTful-API-with-ExpressJS)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -71,17 +71,17 @@ Here are some snippets about this app:
 
 > Web page
 
-|                            Home page                            | Home Page Mobile |
-| :-------------------------------------------------------------: | :--------------: |
-| ![Landing Page](./src/assets/snippets/zwallet-landing-page.png) |      ![]()       |
+|                          Landing Page                           | Landing Page Mobile |
+| :-------------------------------------------------------------: | :-----------------: |
+| ![Landing Page](./src/assets/snippets/zwallet-landing-page.png) |        ![]()        |
 
-|                     Landing Page                     | Landing Page |
-| :--------------------------------------------------: | :----------: |
-| ![Auth Page](./src/assets/snippets/zwallet-auth.png) |    ![]()     |
+|                      Auth Page                       | Auth Page |
+| :--------------------------------------------------: | :-------: |
+| ![Auth Page](./src/assets/snippets/zwallet-auth.png) |   ![]()   |
 
-|                            Register                             | Register Mobile |
-| :-------------------------------------------------------------: | :-------------: |
-| ![Dashboard Page](./src/assets/snippets//zwallet-dashboard.png) |      ![]()      |
+|                         Dashboard Page                          | Dashboard Page Mobile |
+| :-------------------------------------------------------------: | :-------------------: |
+| ![Dashboard Page](./src/assets/snippets//zwallet-dashboard.png) |         ![]()         |
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -90,3 +90,13 @@ Here are some snippets about this app:
 **Zwallet** is currently on development process!
 
 Last Updated on Tuesday, 18/01/2022
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- CONTACT -->
+
+## Contact
+
+Ferdi Ferdiana - [Linkedin](https://www.linkedin.com/in/ferdianfh/) - ferdifh82@gmail.com
+
+<p align="right">(<a href="#top">back to top</a>)</p>
