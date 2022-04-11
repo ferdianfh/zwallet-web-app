@@ -83,16 +83,12 @@ Here are some snippets about this app:
 |                          Landing Page                           |   Landing Page Mobile    |
 | :-------------------------------------------------------------: | :----------------------: |
 | ![Landing Page](./src/assets/snippets/zwallet-landing-page.png) | ![Mobile Landing Page]() |
-|                                                                 |                          |
 |                        Registration Page                        | Registration Page Mobile |
 |  ![Registration Page](./src/assets/snippets/zwallet-auth.png)   |          ![]()           |
-|                                                                 |                          |
 |                         Dashboard Page                          |  Dashboard Page Mobile   |
 | ![Dashboard Page](./src/assets/snippets/zwallet-dashboard.png)  |          ![]()           |
-|                                                                 |                          |
 |                           Top Up Page                           |    Top Up Page Mobile    |
 |   ![Dashboard Page](./src/assets/snippets/zwallet-topup.png)    |          ![]()           |
-|                                                                 |                          |
 |                          Transfer Page                          |   Transfer Page Mobile   |
 |  ![Dashboard Page](./src/assets/snippets/zwallet-transfer.png)  |          ![]()           |
 
