@@ -46,7 +46,16 @@ This app was built with some technologies
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Installation
+## Getting Started
+
+### Prerequisites
+
+- npm
+  ```sh
+  npm install npm@latest -g
+  ```
+
+### Installation
 
 1. Clone the repo
    ```sh
@@ -71,17 +80,25 @@ Here are some snippets about this app:
 
 > Web page
 
-|                          Landing Page                           | Landing Page Mobile |
-| :-------------------------------------------------------------: | :-----------------: |
-| ![Landing Page](./src/assets/snippets/zwallet-landing-page.png) |        ![]()        |
+|                          Landing Page                           |                           Landing Page Mobile                           |
+| :-------------------------------------------------------------: | :---------------------------------------------------------------------: |
+| ![Landing Page](./src/assets/snippets/zwallet-landing-page.png) | ![Mobile Landing Page](./src/assets/snippets/mzwallet-landing-page.png) |
 
 |                      Auth Page                       | Auth Page |
 | :--------------------------------------------------: | :-------: |
 | ![Auth Page](./src/assets/snippets/zwallet-auth.png) |   ![]()   |
 
-|                         Dashboard Page                          | Dashboard Page Mobile |
-| :-------------------------------------------------------------: | :-------------------: |
-| ![Dashboard Page](./src/assets/snippets//zwallet-dashboard.png) |         ![]()         |
+|                         Dashboard Page                         | Dashboard Page Mobile |
+| :------------------------------------------------------------: | :-------------------: |
+| ![Dashboard Page](./src/assets/snippets/zwallet-dashboard.png) |         ![]()         |
+
+|                        Top Up Page                        | Top Up Page Mobile |
+| :-------------------------------------------------------: | :----------------: |
+| ![Dashboard Page](./src/assets/snippets/zwallet-topup.png |       ![]()        |
+
+|                         Transfer Page                         | Transfer Page Mobile |
+| :-----------------------------------------------------------: | :------------------: |
+| ![Dashboard Page](./src/assets/snippets/zwallet-transfer.png) |        ![]()         |
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
