@@ -1,10 +1,50 @@
-# Zwallet! Awesome App For Saving Times.
+<div id="top"></div>
 
-Hello! My name's **Ferdi** and I'm part of the Developer Team who built **Zwallet**! I'm here to inform you about this cool apps. **Zwallet** is a website application that offering the simplicity and rapidity for anything related to banking needs.
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/ferdianfh/zwallet-web-app">
+    <img src="./src/assets/img/logo-lg.png" alt="ZwalletLogo" width="80" height="80">
+  </a>
 
-## Built With
+  <h3 align="center">Zwallet</h3>
+
+  <p align="center">
+    An Awesome App For Saving Time
+    <br />
+    <a href="https://github.com/ferdianfh/zwallet-web-app"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/ferdianfh/zwallet-web-app">View Demo</a>
+    ·
+    <a href="https://github.com/ferdianfh/zwallet-web-app/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/ferdianfh/zwallet-web-app/issues">Request Feature</a>
+  </p>
+</div>
+
+<!-- ABOUT THE PROJECT -->
+
+## About The Project
+
+[![Zwallet Landing Page][./src/assets/snippets/zwallet-landing-page.png]](https://zwallet-web-app.netlify.app)
+
+**Zwallet** is A Website Based Application that offering the simplicity and rapidity for anything related to banking needs, such as, Top Up and Transfer activity.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+### Built With
+
+This app was built with some technologies
 
 - [React.js](https://reactjs.org/)
+- [Vue.js](https://vuejs.org/)
+- [Angular](https://angular.io/)
+- [Svelte](https://svelte.dev/)
+- [Laravel](https://laravel.com)
+- [Bootstrap](https://getbootstrap.com)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Installation
 
@@ -25,49 +65,25 @@ Hello! My name's **Ferdi** and I'm part of the Developer Team who built **Zwalle
 
 Or you can try it here: [Zwallet Web App](https://zwallet-web-app.netlify.app)
 
-## Pages
-
-Some Pages that currently available in **Zwallet**:
-
-- **Login**, if you already have an account.
-- **Sign Up**, if you need to create an account.
-- **Reset Password**, if you already have an account but forgot the password.
-- **Dashboard**, you can check the your balance and other activities in this app.
-- **Transaction History**, you can check your transaction history from _incomes_ to _expenses_, from _weekly_ to _monthly_.
-- **Transfer Receiver**, you can share happiness by send them some _bills_ from this page, it will show your list of contacts.
-- **Transfer Input**, input amount _bills_ you want to transfer.
-- **Transfer Confirmation**, check and confirm your details.
-- **Transfer Status**, it will show you either your transaction is _success_ or _failed_.
-- **Top Up**, you can re-fill your balance anytime.
-- **Profile**, you can customize or edit your profile.
-
 ## Snippets
 
 Here are some snippets about this app:
 
-- Login
+> Web page
 
-![Login](./src/assets/snippets/zwallet-login.jpg)
+|                            Home page                            | Home Page Mobile |
+| :-------------------------------------------------------------: | :--------------: |
+| ![Landing Page](./src/assets/snippets/zwallet-landing-page.png) |      ![]()       |
 
-- Sign Up
+|                     Landing Page                     | Landing Page |
+| :--------------------------------------------------: | :----------: |
+| ![Auth Page](./src/assets/snippets/zwallet-auth.png) |    ![]()     |
 
-![Sign Up](./src/assets/snippets/zwallet-signup.jpg)
+|                            Register                             | Register Mobile |
+| :-------------------------------------------------------------: | :-------------: |
+| ![Dashboard Page](./src/assets/snippets//zwallet-dashboard.png) |      ![]()      |
 
-- Dashboard
-
-![Dashboard](./src/assets/snippets/zwallet-home.png)
-
-- Transaction
-
-![Transaction](./src/assets/snippets/zwallet-transaction.png)
-
-- Transfer
-
-![Transfer](./src/assets/snippets/zwallet-transfer.png)
-
-- Profile
-
-![Profile](./src/assets/snippets/zwallet-profile.png)
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Zwallet Update!
 
