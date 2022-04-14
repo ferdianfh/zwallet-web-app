@@ -42,7 +42,7 @@ This app was built with some technologies
 - [Axios](https://axios-http.com/)
 - [Bootstrap](https://getbootstrap.com)
 - [Netlify](https://www.netlify.com/)
-- [Backend APIs](https://github.com/ferdianfh/RESTful-API-with-ExpressJS)
+- [Backend APIs](https://github.com/ferdianfh/zwallet-backend-api)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -93,6 +93,10 @@ Here are some snippets about this app:
 |  ![Dashboard Page](./src/assets/snippets/zwallet-transfer.png)  |          ![]()           |
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+## Related Project
+
+[Zwallet Backend APIs](https://github.com/ferdianfh/zwallet-backend-api)
 
 ## Zwallet Update!
 
