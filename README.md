@@ -86,6 +86,7 @@ Login as user:
 ```sh
 email: aziz@gmail.com
 password: azizpass123
+PIN: 111222 (DO NOT CHANGE THE PIN!!!)
 ```
 
 ## Snippets
