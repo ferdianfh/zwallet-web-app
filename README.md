@@ -70,7 +70,6 @@ This app was built with some technologies
 3. Install NPM packages
    ```sh
    npm install
-   ``
    ```
 4. Start the Application
    ```sh
