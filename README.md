@@ -54,6 +54,8 @@ This app was built with some technologies
   ```sh
   npm install npm@latest -g
   ```
+- Clone Zwallet APIs Repository and follow the installation guide here:
+  [Zwallet Backend APIs](https://github.com/ferdianfh/zwallet-backend-api)
 
 ### Installation
 
