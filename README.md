@@ -102,8 +102,6 @@ Here are some snippets about this app:
 
 **Zwallet** is currently on development process!
 
-Last Updated on Tuesday, 18/01/2022
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- CONTACT -->
