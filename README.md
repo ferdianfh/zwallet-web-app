@@ -84,13 +84,13 @@ Here are some snippets about this app:
 | :-------------------------------------------------------------: | :----------------------------------------------------------------------: |
 | ![Landing Page](./src/assets/snippets/zwallet-landing-page.png) | ![Mobile Landing Page](./src/assets/snippets/mobile-zwallet-landing.jpg) |
 |                        Registration Page                        |                         Registration Page Mobile                         |
-|  ![Registration Page](./src/assets/snippets/zwallet-auth.png)   |                                  ![]()                                   |
+|  ![Registration Page](./src/assets/snippets/zwallet-auth.png)   | ![Mobile Registration](./src/assets/snippets/mobile-zwallet-signup.jpg)  |
 |                         Dashboard Page                          |                          Dashboard Page Mobile                           |
-| ![Dashboard Page](./src/assets/snippets/zwallet-dashboard.png)  |                                  ![]()                                   |
+| ![Dashboard Page](./src/assets/snippets/zwallet-dashboard.png)  | ![Mobile Dashboard](./src/assets/snippets/mobile-zwallet-dashboard.jpg)  |
 |                           Top Up Page                           |                            Top Up Page Mobile                            |
-|   ![Dashboard Page](./src/assets/snippets/zwallet-topup.png)    |                                  ![]()                                   |
+|   ![Dashboard Page](./src/assets/snippets/zwallet-topup.png)    |     ![Mobile Topup](./src/assets/snippets/mobile-zwallet-topup.jpg)      |
 |                          Transfer Page                          |                           Transfer Page Mobile                           |
-|  ![Dashboard Page](./src/assets/snippets/zwallet-transfer.png)  |                                  ![]()                                   |
+|  ![Dashboard Page](./src/assets/snippets/zwallet-transfer.png)  |  ![Mobile Transfer](./src/assets/snippets/mobile-zwallet-transfer.jpg)   |
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
