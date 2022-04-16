@@ -15,7 +15,7 @@
     <a href="https://github.com/ferdianfh/zwallet-web-app"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/ferdianfh/zwallet-web-app">View Demo</a>
+    <a href="https://zwallet-web-app.netlify.app">View Demo</a>
     ·
     <a href="https://github.com/ferdianfh/zwallet-web-app/issues">Report Bug</a>
     ·
@@ -29,7 +29,7 @@
 
 ![Zwallet Landing Page](./src/assets/snippets/zwallet-landing-page.png)
 
-**Zwallet** is A Website Based Application that offering the simplicity and rapidity for anything related to banking needs, such as, Top Up and Transfer activity.
+**Zwallet** is A Digital Wallet Website Based Application that offering the simplicity and rapidity for anything related to banking needs, such as, Top Up and Transfer activity.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -61,11 +61,16 @@ This app was built with some technologies
    ```sh
    git clone https://github.com/ferdianfh/zwallet-web-app.git
    ```
-2. Install NPM packages
+2. Move to project directory
+   ```sh
+   cd folder-project
+   ```
+3. Install NPM packages
    ```sh
    npm install
+   ``
    ```
-3. Start the Application
+4. Start the Application
    ```sh
    npm start
    ```
@@ -73,6 +78,13 @@ This app was built with some technologies
 ## Demonstration
 
 Or you can try it here: [Zwallet Web App](https://zwallet-web-app.netlify.app)
+
+Login as user:
+
+```sh
+email: aziz@gmail.com
+password: azizpass123
+```
 
 ## Snippets
 
